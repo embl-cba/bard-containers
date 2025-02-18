@@ -1,0 +1,141 @@
+[
+    {
+        "Id": "sha256:e033ac25b1fcdc92cafcb7225ab475670a7e43e07db55c8de13fc80ed189eaa0",
+        "RepoTags": [
+            "registry.git.embl.de/grp-cbbcs/abcdesktop-apps/fiji:latest"
+        ],
+        "RepoDigests": [
+            "registry.git.embl.de/grp-cbbcs/abcdesktop-apps/fiji@sha256:bd484435d242cb167844795b880cfa7d12de3bff532cc27b4017ad9fec4bca05"
+        ],
+        "Parent": "",
+        "Comment": "",
+        "Created": "2025-02-17T10:56:46.619118013Z",
+        "DockerVersion": "",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "root",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/user/local/Fiji.app:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NVARCH=x86_64",
+                "NVIDIA_REQUIRE_CUDA=cuda>=11.8 brand=tesla,driver>=470,driver<471 brand=unknown,driver>=470,driver<471 brand=nvidia,driver>=470,driver<471 brand=nvidiartx,driver>=470,driver<471 brand=geforce,driver>=470,driver<471 brand=geforcertx,driver>=470,driver<471 brand=quadro,driver>=470,driver<471 brand=quadrortx,driver>=470,driver<471 brand=titan,driver>=470,driver<471 brand=titanrtx,driver>=470,driver<471",
+                "NV_CUDA_CUDART_VERSION=11.8.89-1",
+                "NV_CUDA_COMPAT_PACKAGE=cuda-compat-11-8",
+                "CUDA_VERSION=11.8.0",
+                "LD_LIBRARY_PATH=/usr/local/nvidia/lib:/usr/local/nvidia/lib64",
+                "NVIDIA_VISIBLE_DEVICES=all",
+                "NVIDIA_DRIVER_CAPABILITIES=compute,utility",
+                "NV_CUDA_LIB_VERSION=11.8.0-1",
+                "NV_NVTX_VERSION=11.8.86-1",
+                "NV_LIBNPP_VERSION=11.8.0.86-1",
+                "NV_LIBNPP_PACKAGE=libnpp-11-8=11.8.0.86-1",
+                "NV_LIBCUSPARSE_VERSION=11.7.5.86-1",
+                "NV_LIBCUBLAS_PACKAGE_NAME=libcublas-11-8",
+                "NV_LIBCUBLAS_VERSION=11.11.3.6-1",
+                "NV_LIBCUBLAS_PACKAGE=libcublas-11-8=11.11.3.6-1",
+                "NV_LIBNCCL_PACKAGE_NAME=libnccl2",
+                "NV_LIBNCCL_PACKAGE_VERSION=2.15.5-1",
+                "NCCL_VERSION=2.15.5-1",
+                "NV_LIBNCCL_PACKAGE=libnccl2=2.15.5-1+cuda11.8",
+                "NVIDIA_PRODUCT_NAME=CUDA",
+                "DEBCONF_FRONTEND=noninteractive",
+                "TERM=linux",
+                "LANG=en_US.utf8",
+                "BUSER=balloon",
+                "NUMBA_CACHE_DIR=/tmp/numba_cache",
+                "QT_XCB_NO_MITSHM=1",
+                "BIOIMAGEIO_CACHE_PATH=/tmp//pybio_cache",
+                "CURRENT_USER=`whoami`",
+                "APPNAME=Fiji",
+                "APPBIN=/usr/local/Fiji.app/ImageJ-linux64",
+                "APP=/usr/local/Fiji.app/ImageJ-linux64",
+                "ARGS=-Djava.io.tmpdir=/tmp -Dij2.plugin.dirs=/usr/local/Fiji.app/jars:/usr/local/Fiji.app/plugins:/home/`whoami`/.plugins",
+                "FIJIPATH=/user/local/Fiji.app",
+                "TMPDIR=/tmp"
+            ],
+            "Cmd": [
+                "sh",
+                "-c",
+                "mkdir -p ~/tmp && /composer/appli-docker-entrypoint.sh "
+            ],
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "/opt",
+            "Entrypoint": [
+                "/opt/nvidia/nvidia_entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "maintainer": "NVIDIA CORPORATION <cudatools@nvidia.com>",
+                "oc.acl": "{\"permit\":[\"all\"]}",
+                "oc.args": "-Djava.io.tmpdir=/tmp -Dij2.plugin.dirs=/usr/local/Fiji.app/jars:/usr/local/Fiji.app/plugins:/home/`whoami`/.plugins",
+                "oc.cat": "development",
+                "oc.displayname": "Fiji (full)",
+                "oc.icon": "fiji_icon.svg",
+                "oc.icondata": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiICAKICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiCiAgIHdpZHRoPSIxMzIiIGhlaWdodD0iMTMyLjE1MDI0Ij4KICA8ZGVmcz4KICAgIDxmaWx0ZXIKICAgICAgIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiIKICAgICAgIGlua3NjYXBlOmNvbGxlY3Q9ImFsd2F5cyIKICAgICAgIGlkPSJmaWx0ZXI0MzIzNC04Ij4KICAgICAgPGZlR2F1c3NpYW5CbHVyCiAgICAgICAgIGlua3NjYXBlOmNvbGxlY3Q9ImFsd2F5cyIKICAgICAgICAgc3RkRGV2aWF0aW9uPSIxNS45NTM1MDQiCiAgICAgICAgIGlkPSJmZUdhdXNzaWFuQmx1cjQzMjM2LTYiIC8+CiAgICA8L2ZpbHRlcj4KICAgIDxwYXRoIGlkPSJNYWluIgogICAgICAgZD0ibSA0OTUuNjQxNDQsMTQ0Ni4yNSA1NS44NTg1NiwwIC0wLjY0NjQ1LDI4NC45NTUyIC0xNjkuMDM1MjcsMCAwLC01Ni44NjE0IDExMy44MjMxNiwtMC4wOTQgeiBtIDExMy44NTg1NiwwIDU2LDAgLTAuNjQ2NDUsMTcwLjk1NTIgLTU1LDAgeiBtIC0yMjgsMCA1NiwwIC0wLjY0NjQ1LDE3MC45NTUyIC01NSwwIHogbSAtNTcuOTk4NjUsMjgzLjk0ODQgLTU2LjU2ODU0LDAuNzA3MSAwLjcwNzExLC0zOTguODA4MyAzOTcuMzYwMDgsMC43Nzc4IDAsNTYuNSAtMzQwLjYxNDc2LC0wLjE3ODkgeiIvPgogIDwvZGVmcz4KICA8bWV0YWRhdGE+CiAgICA8cmRmOlJERj4KICAgICAgPGNjOldvcmsgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgICAgIDxkYzp0eXBlIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+CiAgICAgICAgPGRjOnRpdGxlPjwvZGM6dGl0bGU+CiAgICAgIDwvY2M6V29yaz4KICAgIDwvcmRmOlJERj4KICA8L21ldGFkYXRhPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC02My41MTk4MiwtMzU5LjQzMzY4KXNjYWxlKDAuMjc3ODEwNTEsMC4yNzc4MTA1MSkiPgogICAgPHVzZSB4bGluazpocmVmPSIjTWFpbiIgc3R5bGU9ImZpbGw6IzAwMDAwMDtmaWx0ZXI6dXJsKCNmaWx0ZXI0MzIzNC04KSIvPgogICAgPHVzZSB4bGluazpocmVmPSIjTWFpbiIgc3R5bGU9ImZpbGw6IzY0YTRlMiIvPgogIDwvZz4KPC9zdmc+",
+                "oc.keyword": "fiji",
+                "oc.launch": "sun-awt-X11-XFramePeer.net-imagej-launcher-ClassLauncher",
+                "oc.name": "fiji",
+                "oc.path": "/usr/local/Fiji.app/ImageJ-linux64",
+                "oc.rules": "{\"homedir\":{\"default\":true}}",
+                "oc.template": "abcdesktopio/oc.template.gtk",
+                "oc.type": "app",
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "22.04"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 13993672613,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/24123eb5e009b73c53a8f646d4290e9d772e30622a24294a7fcebec708ae9c98/diff:/var/lib/docker/overlay2/4394767df60b2a16585ea6dbc3cc2f61f276e26e9ac4179cfe7cc76328da9cda/diff:/var/lib/docker/overlay2/d70bb17a8a158653dc1f40a2bb9cc7ab2840dfb0069d0183a21c9de4b62a3e7b/diff:/var/lib/docker/overlay2/4676ffdd99a98819e0a18922a51363d06dd2e8df619fbc43c5779cf48cf86190/diff:/var/lib/docker/overlay2/fe16898cc68fd36543402542f94f71f5f9a600e2b2f3a72a01e9c6cac7510053/diff:/var/lib/docker/overlay2/47a540c0fa1034e7f97f7546529b44f42c6d7304b21858d0a4663e913d037bf6/diff:/var/lib/docker/overlay2/c39e3be98ec46f6724d7a231cbe4d23d9cdca0a76e28b32b74ffb6179703ec99/diff:/var/lib/docker/overlay2/7a619e80d1a86a6eff65cdce7788d772299c29b1a4cca6f7be0a310b3ddc1000/diff:/var/lib/docker/overlay2/ae7383384c81531fa5f87ebb4dc193e1a494d8bb56239fa22e639444cf6dbfc8/diff:/var/lib/docker/overlay2/848aeef156b7330d7369aff5fa0c6e4e694872984042f0477ec87189b1926eac/diff:/var/lib/docker/overlay2/c44dc33d6a2b9b70173913ab7959c64621bc8674f93de3fddbcabe86cf3f0970/diff:/var/lib/docker/overlay2/801a3e8b9f64781c4ea7ded1c8eaf43993e0b665e90cfb0ba45efef454bc0d32/diff:/var/lib/docker/overlay2/3d0efd95f437a28d0fc466150eb87869f656094dcc6d303d1c8eb9b37134708b/diff:/var/lib/docker/overlay2/8cce97f970383612c1110a863beb8e33a1c4667656e97b0ce812a2952dba5c59/diff:/var/lib/docker/overlay2/10811fb53af974ba6f7b6bfbdb0f6ee7a5e838e59b3aed31e53dc75a3db71a96/diff:/var/lib/docker/overlay2/0442c36530f49b7695d5453be15886b1a7643cfdcafe6ffdb95d20f7520f44a3/diff:/var/lib/docker/overlay2/75eeb28507334bf56f6ef54e332518e305e3b362878c5af52140066b13b1725f/diff:/var/lib/docker/overlay2/98d80269aee88ce1f93ffc4024c96051c59c2ed32041f1dec6e5c60dfe616c2d/diff:/var/lib/docker/overlay2/a2cbd6a123578f29828dcdf61016c85e046980b36d82c19de9f0e72d47d70092/diff:/var/lib/docker/overlay2/b1404e08746f6a65f45a84727b9ed586c1729a88edb172f00ceb35b2d63988c3/diff:/var/lib/docker/overlay2/b5e72a6593557682d0a6e004a2fd174ab1f4c7de74184bf2f6a2d11ad204058c/diff:/var/lib/docker/overlay2/f93d1aeea826cdb39b149e47fb067f5594254edb60ae9995487d45a7fab82528/diff:/var/lib/docker/overlay2/9a327deb64ad8b1586c89c1063f70e6b77c8bf8f969ed0025467fd7c8cec5d13/diff:/var/lib/docker/overlay2/9fdfae79d7df0f9d4d6e00ebfefb2c4ebf648b3773bb5b10e8d22857c39c65c6/diff:/var/lib/docker/overlay2/465b2d9f9183c82eba153c110fff83de95fd8c3cd3ae17b6116379a9d4115bbd/diff",
+                "MergedDir": "/var/lib/docker/overlay2/43c6a5c064a3b403d768cf7fbaab389a098f3d5d2d4475903122f0a5ad789b0f/merged",
+                "UpperDir": "/var/lib/docker/overlay2/43c6a5c064a3b403d768cf7fbaab389a098f3d5d2d4475903122f0a5ad789b0f/diff",
+                "WorkDir": "/var/lib/docker/overlay2/43c6a5c064a3b403d768cf7fbaab389a098f3d5d2d4475903122f0a5ad789b0f/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:256d88da41857db513b95b50ba9a9b28491b58c954e25477d5dad8abb465430b",
+                "sha256:e6c05e83c163d632918d1c4906ee088b1e0d93a5bb3acfc6a268da52e76cc945",
+                "sha256:d6b19a46b795f8b562888c6e2826a6b11f744ab98543268b4d45ee1af05ed1cf",
+                "sha256:c0e21dcee62311c36e1f025307b3186a4b4a034f0b52011704402b39623b6587",
+                "sha256:498bbcc60d01b2080fd6fc35117cb82c80ddd4eb8a654ee330dd91587b7ec90b",
+                "sha256:bc352a27a0e47d42df7bc06e702351a4f3102d20016484c9613644dba63239e0",
+                "sha256:399d155a03b034314cd9ea52e4e1feca44be4cf92ae172ba9c6ce14f5897f0a2",
+                "sha256:dcb0f55f81ad931bb976c65730e4bafe7a03936d1fd1bd0fec6a9bcfde23561d",
+                "sha256:345cfa465206a6d1cc0812481df7edbc4553b64a26c63ccda0e5b11b0f2bf81b",
+                "sha256:7741d76f19447c0af7320d4989077f1b3b5c95f8c0b458b1f7a7db6898229410",
+                "sha256:47a6aff6e437349a01a1de7ae93e2c9a210bc91938eaff869a4c82f3fcef460c",
+                "sha256:f16f969e75d4ffb29c3c27cf5cc90daefe8f4f6306e31997d137409aa5a62ea8",
+                "sha256:3a392e181d13b2bb126b17d3f1a4408eb7ae5ebd635bbaa9a0cb6768e31465b3",
+                "sha256:5eeccd8b3f575ecb06628096c05569769af57a9fe05770569b9a8e1b8959f19c",
+                "sha256:33bffa755118da1ddef55b283054140a44d92b768715ad7d7bb6a76d2ff62ea0",
+                "sha256:f7a77f56000db67d0cee680c42695afa41cbe3ada45775fec5985c3530a4847e",
+                "sha256:7793beae107a4f6768848cbe1c6a3ed666bd8b8080ea8f2fafb6f8b7d34c7336",
+                "sha256:922eb89955e96b08e5f83d3df11e5aabe9a04abb23337121bf96ccfddbf4762a",
+                "sha256:35034a10e5899f4d77d62e9bd641d4dbe7ff8da9f5650764212289048fe3acde",
+                "sha256:03babc66af9add839a10b31342ef655eb8d690037cbcb397ea505465bd942591",
+                "sha256:79b22963c3a612925e37e7eb8a05254a2ff376687d2c1f5a8ad7d27e3c95a621",
+                "sha256:ed92781101525be6a880b511c402c38c068a68b679a5d68957008cf280a1f7fc",
+                "sha256:ece1ad07ae9b4249977eeb8b3ba5a394bc4e8f29fc74213314e32898d5e04583",
+                "sha256:a238a97c88f0edb8bfe826cb94fc87c32a2479bdf9976145889554a8a14e4c3b",
+                "sha256:8787c3df79e79abc19dee1ed566f2c416029855e964adea7f19540be1ccbc7ee",
+                "sha256:d731e3dce3cc32898d96947e6cd959930cda42b639df7d1b39262a8ff9590df9"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]

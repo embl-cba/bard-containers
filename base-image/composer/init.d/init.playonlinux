@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "Start init $(date)" > /tmp/init.playonlinux.date
+
+bash /composer/init.d/_init.playonlinux | zenity --progress \
+  --title="Progress Status" \
+  --text="Building PlayOnLinux environnment." \
+  --percentage=0 \
+  --auto-close \
+  --auto-kill
+
+zenity --info \
+  --title="Starting Wine App" \
+  --text="$APPNAME is taking a while, for the first start" \
+  --timeout 10 &
+
+echo "End of init $(date)" >> /tmp/init.playonlinux.date

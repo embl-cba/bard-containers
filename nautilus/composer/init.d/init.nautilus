@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo "start of init.nautilus"
+# make sure the nautilus directory exists in .config
+# prevent message 
+#
+#    Oops! Something went wrong 
+#  Unable to create a required folder. Please create the folling folder
+#  or set permissions such that it can be created:
+#  /home/balloon/.config/nautilus
+#
+mkdir -p ~/.config/nautilus
+if [ ! -f ~/.gtk-bookmarks ]; then
+	touch ~/.gtk-bookmarks
+fi
+
+if [ ! -f ~/.local/share/nautilus-python/extensions/desktop_download.py ]; then
+	mkdir -p ~/.local/share/nautilus-python/extensions/
+	cp /composer/desktop_download.py ~/.local/share/nautilus-python/extensions/desktop_download.py
+        chmod 755 ~/.local/share/nautilus-python/extensions/desktop_download.py
+fi
+
+echo "end of init.nautilus"
