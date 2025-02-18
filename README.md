@@ -1,6 +1,6 @@
 # BARD Containers
 
-This repository contains the container recipes for the BARD virtual desktop. BARD is built on top of the the open-source project [abcdesktop](https://www.abcdesktop.io/).
+This repository contains the container recipes for the BARD virtual desktop. BARD is built on top of the open-source project [abcdesktop](https://www.abcdesktop.io/).
 ## Current deployment of BARD
 
  - EMBL Heidelberg
