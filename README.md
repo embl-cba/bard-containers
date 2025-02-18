@@ -11,6 +11,11 @@ Internal instance:   https://bard.embl.de
 
 To request a demo or testing account, please send an email to itsupport@embl.de
 
+## Deploy your own BARD
+BARD is built on top of abcdesktop. There are two options to create your own BARD.
+1. refer to the original abcdesktop, create a vanila abcdesktop and then come back to this repo to deploy scientific applications.
+2. refer to our EMBL specific deployment [here](https://git.embl.de/grp-cbbcs/abcdesktop-config), then use this repo to deploy applications.
+
 ## Courses that used BARD
 |Name|No. of Participants  |Location| Dates|
 |--|--|--|--|
