@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "Start init $(date)" > /tmp/init.wine.date
+
+bash /composer/init.d/_init.wine | zenity --progress \
+  --title="Progress Status" \
+  --text="Building Wine environnment." \
+  --percentage=0 \
+  --auto-close \
+  --auto-kill
+
+echo "End of init $(date)" >> /tmp/init.wine.date

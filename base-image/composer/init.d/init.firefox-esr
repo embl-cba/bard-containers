@@ -1,0 +1,2 @@
+/usr/bin/firefox-esr -CreateProfile abcdesktop-firefox-esr
+ln -s /usr/bin/ntlm_auth.desktop ~/ntlm_auth

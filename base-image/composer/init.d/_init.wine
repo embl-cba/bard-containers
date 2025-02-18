@@ -1,0 +1,141 @@
+# =================================================================
+echo "# Running Init Wine Application." ; sleep 1
+
+ODWINE=~/.odwine
+# convert APPNAME to lower case
+APPNAME=$(echo "$APPNAME" | tr '[:upper:]' '[:lower:]')
+#echo "APPNAME=$APPNAME"
+
+LOCALWINE="$ODWINE/$APPNAME"
+#echo "LOCALWINE=$LOCALWINE"
+
+LOCALWINEUSERDATA="$LOCALWINE/USERDATA"
+# echo "LOCALWINEUSERDATA=$LOCALWINEUSERDATA"
+
+mkdir -p $ODWINE
+mkdir -p "$LOCALWINE"
+mkdir -p "$LOCALWINEUSERDATA"
+
+
+# =================================================================
+echo "10"
+echo "# Copying Wine Registry Application." ; sleep 0.5
+
+# regsitry files :
+# user.reg
+# if file does not exist copy default user.reg file
+# copy and link user info 
+if [ ! -f ${LOCALWINE}/user.reg ]; then
+	       cp -nv  ${WINEPREFIX}/user.reg  ${LOCALWINE}/user.reg
+fi
+
+# use local registry user.reg
+rm $WINEPREFIX/user.reg
+ln -s $LOCALWINE/user.reg $WINEPREFIX/user.reg
+
+
+# =================================================================
+echo "20"
+echo "# Building Windows directories" ; 
+
+# echo "build default homedir entries"
+USERSHAREDFOLDERLIST=( 'Templates' 'Desktop' 'Cookies' 'Favorites' 'PrintHood' 'SendTo' 'Contacts' 'Downloads' 'Links' 'NetHood' 'Recent' 'Searches' )
+# echo " USERSHAREDFOLDERLIST set "
+
+
+
+# shopt -s dotglob nullglob
+
+for f in "${USERSHAREDFOLDERLIST[@]}";  do
+	# =================================================================
+	echo "30"
+	echo "# Building $f" ; 
+	# echo "Checking ~/$f" 
+	# Create default Folder if it does not exist
+	if  [ ! -d ~/"$f" ]; then
+		echo "Directory does not exist, create a new one ~/$f"
+		mkdir ~/"$f"
+	fi
+
+	if  [ -L "$WINEPREFIX"/drive_c/users/balloon/"$f" ]; then	
+		echo "$WINEPREFIX/drive_c/users/balloon/$f is a link, remove it" 
+		rm -rf "$WINEPREFIX"/drive_c/users/balloon/"$f"
+	fi     
+	
+	if  [ -d "$WINEPREFIX"/drive_c/users/balloon/"$f" ]; then
+		echo "$WINEPREFIX/drive_c/users/balloon/$f is a directory, copy and remove it"
+		echo "cp -nrv $WINEPREFIX/drive_c/users/balloon/$f/*  ~/$f"
+		cp -nrv  "$WINEPREFIX"/drive_c/users/balloon/"$f"/*  ~/"$f"
+		rm -rf "$WINEPREFIX"/drive_c/users/balloon/"$f"
+	fi
+        # echo "list home"
+	# ls -la "$WINEPREFIX"/drive_c/users/balloon
+	# echo "list $f"
+	# ls -la "$WINEPREFIX"/drive_c/users/balloon/"$f"
+	# Create a symbolic link
+	# echo "Linking symbolic ~/$f $WINEPREFIX/drive_c/users/balloon/$f" 
+	ln -s ~/"$f" "$WINEPREFIX"/drive_c/users/balloon/"$f"
+done;
+
+# echo "build $LOCALWINEUSERDATA entries"
+APPFOLDERLIST=("AppData" "Local Settings" ) 
+for f in "${APPFOLDERLIST[@]}"; do 
+    # =================================================================
+    echo "50"
+    echo "# Building $f" ;
+    if  [ ! -d "$LOCALWINEUSERDATA"/"$f" ]; then 
+        # echo "$LOCALWINEUSERDATA/$f does not exist, create it"
+        mkdir -p "$LOCALWINEUSERDATA"/"$f"
+    fi
+
+    if  [ -L "$WINEPREFIX"/drive_c/users/balloon/"$f" ]; then
+	# echo  "$WINEPREFIX/drive_c/users/balloon/$f is a link, remove it"  
+        rm -f "$WINEPREFIX"/drive_c/users/balloon/"$f"
+    fi
+	     
+    if  [ -d "$WINEPREFIX"/drive_c/users/balloon/"$f" ]; then
+        # echo  "$WINEPREFIX/drive_c/users/balloon/$f  is a directory, copy and remove it"
+	# echo "cp -nrv $WINEPREFIX/drive_c/users/balloon/$f/* $LOCALWINEUSERDATA/$f" 
+	ls -la "$WINEPREFIX"/drive_c/users/balloon/"$f"/*
+        cp -nrv "$WINEPREFIX"/drive_c/users/balloon/"$f"/* "$LOCALWINEUSERDATA"/"$f"
+        rm -rf "$WINEPREFIX"/drive_c/users/balloon/"$f"
+    fi
+
+    # Create a symbolic link
+    echo "Linking symbolic $LOCALWINEUSERDATA/$f $WINEPREFIX/drive_c/users/balloon/$f"
+    ln -s "$LOCALWINEUSERDATA"/"$f" "$WINEPREFIX"/drive_c/users/balloon/"$f"
+done;
+
+
+# =================================================================
+echo "80"
+echo "# Add new cache entries" ;
+# touch /composer/.cache/fontconfig/*
+# if [ ! -L "~/.cache/fontconfig" ] 
+# then 
+# 	ln -s /composer/.cache/fontconfig  	~/.cache/fontconfig
+# fi
+# 
+# if [ ! -L "~/.cache/wine" ] 
+# then
+# 	ln -s /composer/.cache/wine  		~/.cache/wine
+# fi
+
+
+# =================================================================
+echo "90"
+echo "# Remapping 'Application Data' and AppData/Roaming" ;
+
+# Special case for 'Application Data'
+# "Application Data" is what you would find in Windows XP.
+# In Windows Vista and Windows 7, "Application Data" is actually a link to "AppData/Roaming" folder.
+mkdir -p "$LOCALWINEUSERDATA/AppData/Roaming"
+if [ -d "$WINEPREFIX"/drive_c/users/balloon/'Application Data' ]; then
+	cp -nrv "$WINEPREFIX"/drive_c/users/balloon/'Application Data'/* "$LOCALWINEUSERDATA/AppData/Roaming/"
+fi
+rm -rf "$WINEPREFIX"/drive_c/users/balloon/'Application Data'
+ln -s "$LOCALWINEUSERDATA/AppData/Roaming" "$WINEPREFIX"/drive_c/users/balloon/'Application Data'
+# =================================================================
+echo "# All finished." ; 
+echo "100"
+sleep 0.5
