@@ -3,8 +3,10 @@
 This repository contains the container recipes for the BARD virtual desktop. BARD is built on top of the the open-source project [abcdesktop](https://www.abcdesktop.io/).
 ## Current deployment of BARD
 
- - EMBL Heidelberg 
-Public instance: https://bard-external.embl.de 
+ - EMBL Heidelberg
+   
+Public instance: https://bard-external.embl.de
+
 Internal instance:   https://bard.embl.de
 
 To request a demo or testing account, please send an email to itsupport@embl.de
