@@ -24,7 +24,7 @@ To request a demo or testing account, please send an email to itsupport@embl.de
 ## Files
 
 ### System containers
-Currently, these containers are specific to EMBL instances. However, they can be adapted for use in other environments with the necessary modifications.
+The system containers in this repository (listed below) are specific to EMBL instances. However, they can be adapted for use in other environments with the necessary modifications.
 
 ### Application containers
 Each folder contains:
