@@ -1,13 +1,20 @@
 # BARD Containers
 
-This repository contains the container recipes for the BARD virtual desktop. BARD is built on top of the the open-source project [abcdesktop](https://www.abcdesktop.io/).
+This repository contains the container recipes for the BARD virtual desktop. BARD is built on top of the open-source project [abcdesktop](https://www.abcdesktop.io/).
 ## Current deployment of BARD
 
- - EMBL Heidelberg 
-Public instance: https://bard-external.embl.de 
+ - EMBL Heidelberg
+   
+Public instance: https://bard-external.embl.de
+
 Internal instance:   https://bard.embl.de
 
 To request a demo or testing account, please send an email to itsupport@embl.de
+
+## Deploy your own BARD
+BARD is built on top of abcdesktop. There are two options to create your own BARD.
+1. refer to the original abcdesktop, create a vanila abcdesktop and then come back to this repo to deploy scientific applications.
+2. refer to our EMBL specific deployment [here](https://git.embl.de/grp-cbbcs/abcdesktop-config), then use this repo to deploy applications.
 
 ## Courses that used BARD
 |Name|No. of Participants  |Location| Dates|
@@ -22,7 +29,7 @@ To request a demo or testing account, please send an email to itsupport@embl.de
 ## Files
 
 ### System containers
-Currently, these containers are specific to EMBL instances. However, they can be adapted for use in other environments with the necessary modifications.
+The system containers in this repository (listed below) are specific to EMBL instances. However, they can be adapted for use in other environments with the necessary modifications.
 
 ### Application containers
 Each folder contains:
