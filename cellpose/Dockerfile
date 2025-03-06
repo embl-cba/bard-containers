@@ -88,12 +88,8 @@ RUN conda create -y --name cellpose python=3.10 -c conda-forge && \
 
 RUN mkdir -p /run/user && chmod 777 /run/user
 
-USER root
-
 RUN mkdir -p /etc/localaccount && \
     for f in passwd shadow group gshadow ; do if [ -f /etc/$f ] ; then  cp /etc/$f /etc/localaccount; rm -f /etc/$f; ln -s /etc/localaccount/$f /etc/$f; fi; done
-
-#USER balloon
 
 CMD ["/composer/appli-docker-entrypoint.sh" ]
 
