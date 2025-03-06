@@ -1,12 +1,14 @@
+# Base image
 FROM abcdesktopio/oc.template.ubuntu.22.04:3.2
-
+# Run apt command silently
 ARG DEBIAN_FRONTEND="noninteractive"
 
+# Set LOCALE
 ENV LANG en_US.UTF-8 \
     LC_ALL en_US.UTF-8 \
-    LANGUAGE en_US:en  \
-    NUMBA_CACHE_DIR=/tmp
+    LANGUAGE en_US:en 
 
+# Install system dependencies
 RUN apt-get update -y && \
     apt-get install -y -q --no-install-recommends \
             gcc \
@@ -39,26 +41,31 @@ RUN apt-get update -y && \
             sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen && \
             locale-gen
 
-
+# Install miniforge 
 WORKDIR /tmp
 RUN wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh \
     && bash Miniforge3-Linux-x86_64.sh -b -p /opt/conda \
     && rm -f Miniforge3-Linux-x86_64.sh 
 
-ENV CONDA_BIN_PATH="/opt/conda/bin"
+# Setting enviroment variables
+ENV NUMBA_CACHE_DIR /tmp
+ENV CONDA_BIN_PATH "/opt/conda/bin"
 ENV PATH $CONDA_BIN_PATH:$PATH
-ENV LD_PRELOAD="/usr/lib/x86_64-linux-gnu/libstdc++.so.6"
+ENV LD_PRELOAD "/usr/lib/x86_64-linux-gnu/libstdc++.so.6"
 ENV LD_LIBRARY_PATH "/usr/local/nvidia/lib:/usr/local/nvidia/lib64"
 ENV NVIDIA_DRIVER_CAPABILITIES "compute,utility"
 
+# Install CellPose
 ENV QT_DEBUG_PLUGINS=1
 ENV QT_PLUGIN_PATH="/opt/conda/envs/cellpose/lib/python3.10/site-packages/PyQt6/Qt6/plugins/platforms"
 
-RUN chmod +x /usr/local/bin/startcp3d.sh && conda install mamba -n base -c conda-forge
+RUN conda install mamba -n base -c conda-forge
 
 RUN conda create -y --name cellpose python=3.10 -c conda-forge && \
     conda run --name cellpose python -m pip install torch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 --extra-index-url https://download.pytorch.org/whl/cu118 && \
     conda run --name cellpose python -m pip install pyqt6==6.6.1 pyqt6-qt6==6.6.1 && \
     conda run --name cellpose python -m pip install cellpose[gui] numpy==1.26.3
+# End of Installation
 
-CMD ["/opt/conda/envs/cellpose/bin/python3 -m cellpose" ]
+ENTRYPOINT ["/opt/conda/envs/cellpose/bin/python3","-m","cellpose" ]
+
