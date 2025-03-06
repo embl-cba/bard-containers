@@ -59,7 +59,7 @@ LABEL oc.displayname="Cellpose v3.1.0"
 LABEL oc.path="/usr/bin/konsole"
 LABEL oc.args="--hold -e bash -c /opt/conda/envs/cellpose/bin/cellpose"
 LABEL oc.type=app
-LABEL oc.rules="{\"homedir\":{\"default\":true}}"
+#LABEL oc.rules="{\"homedir\":{\"default\":true}}"
 LABEL oc.showinview=dock
 LABEL oc.acl="{\"permit\":[\"all\"]}"
 
