@@ -1,0 +1,8 @@
+FROM bitnami/kubectl:latest
+
+COPY cleanup-ext.sh /usr/local/bin/cleanup-ext.sh
+
+USER root
+RUN chmod +x /usr/local/bin/cleanup-ext.sh
+
+CMD ["/usr/local/bin/cleanup-ext.sh"]

@@ -1,0 +1,74 @@
+{
+  "name": "abcdesktop@EMBL",
+  "projectNameSplitedHTML": "<span id='projectNameSplitedStagea'>a</span><span id='projectNameSplitedStageb'>b</span><span id='projectNameSplitedStagec'>c</span><span id='projectNameSplitedStaged'>desktop</span><span id='projectNameSplitedStaged'>@EMBL</span>",
+  "colors": [
+    {
+      "name": "@primary",
+      "value": "#474B55"
+    },
+    {
+      "name": "@secondary",
+      "value": "#055160"
+    },
+    {
+      "name": "@tertiary",
+      "value": "#6EC6F0"
+    },
+    {
+      "name": "@quaternary",
+      "value": "#1E1E1E"
+    },
+    {
+      "name": "@svgColor",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "@danger",
+      "value": "#CD3C14"
+    },
+    {
+      "name": "@success",
+      "value": "#32C832"
+    },
+    {
+      "name": "@info",
+      "value": "#527EDB"
+    },
+    {
+      "name": "@warning",
+      "value": "#FFCC00"
+    },
+    {
+      "name": "@light",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "@dark",
+      "value": "#666666"
+    },
+    {
+      "name": "@blue",
+      "value": "#4BB4E6"
+    },
+    {
+      "name": "@green",
+      "value": "#50BE87"
+    },
+    {
+      "name": "@purple",
+      "value": "#A885D8"
+    },
+    {
+      "name": "@pink",
+      "value": "#FFB4E6"
+    },
+    {
+      "name": "@yellow",
+      "value": "#FFD200"
+    }
+  ],
+  "urlcannotopensession": "/identification/site/",
+  "urlusermanual":  "https://www.abcdesktop.io/",
+  "urlusersupport": "https://www.abcdesktop.io/",
+  "urlopensourceproject": "https://www.abcdesktop.io/"
+}

@@ -1,0 +1,128 @@
+[
+    {
+        "Id": "sha256:ca48c3e1cba779d9418499f7e2dfbef3c53b1367a73d20d070697decb5a90b07",
+        "RepoTags": [
+            "registry.git.embl.de/grp-cbbcs/abcdesktop-apps/napari:latest"
+        ],
+        "RepoDigests": [
+            "registry.git.embl.de/grp-cbbcs/abcdesktop-apps/napari@sha256:eaf19a3325b84262072a45da3849aacd72ea2288b45a97da3e4bab11d19468ef"
+        ],
+        "Parent": "",
+        "Comment": "",
+        "Created": "2024-11-15T09:41:20.781368508Z",
+        "Container": "",
+        "ContainerConfig": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": null,
+            "Cmd": null,
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": null
+        },
+        "DockerVersion": "",
+        "Author": "Alexandre DEVELY",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "root",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "DEBCONF_FRONTEND=noninteractive",
+                "TERM=linux",
+                "LANG=en_US.utf8",
+                "BUSER=balloon",
+                "DEBIAN_FRONTEND=noninteractive",
+                "TZ=Europe/Berlin",
+                "QT_XCB_NO_MITSHM=1",
+                "NVIDIA_DRIVER_CAPABILITIES=compute,utility",
+                "APPNAME=napari",
+                "APPBIN=/opt/conda/envs/napari/bin/naparia",
+                "APP=/opt/conda/envs/napari/bin/naparia",
+                "CONDA_BIN_PATH=/opt/conda/bin"
+            ],
+            "Cmd": [
+                "/composer/appli-docker-entrypoint.sh"
+            ],
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "/tmp",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "oc.acl": "{\"permit\":[\"all\"]}",
+                "oc.cat": "development",
+                "oc.displayname": "Napari v0.5.4",
+                "oc.icon": "napari-logo.svg",
+                "oc.icondata": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjEwMjRweCIgaGVpZ2h0PSIxMDI0cHgiIHN0eWxlPSJzaGFwZS1yZW5kZXJpbmc6Z2VvbWV0cmljUHJlY2lzaW9uOyB0ZXh0LXJlbmRlcmluZzpnZW9tZXRyaWNQcmVjaXNpb247IGltYWdlLXJlbmRlcmluZzpvcHRpbWl6ZVF1YWxpdHk7IGZpbGwtcnVsZTpldmVub2RkOyBjbGlwLXJ1bGU6ZXZlbm9kZCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgo8Zz48cGF0aCBzdHlsZT0ib3BhY2l0eToxIiBmaWxsPSIjM2IzNzQ1IiBkPSJNIDM1NC41LDgxLjUgQyA0NTkuMTY3LDgxLjMzMzMgNTYzLjgzNCw4MS41IDY2OC41LDgyQyA3MDMuOTgzLDgyLjE0MDcgNzM5LjMxNyw4NC40NzQxIDc3NC41LDg5QyA4MDMuMDA0LDkyLjU0MTMgODMwLjAwNCwxMDAuODc1IDg1NS41LDExNEMgODg0LjkyNSwxMzAuNzU4IDkwNS43NTgsMTU0LjkyNSA5MTgsMTg2LjVDIDkzMC44MTMsMjIyLjcwNCA5MzcuODEzLDI2MC4wMzggOTM5LDI5OC41QyA5MzkuOTUyLDMxNi44MjMgOTQwLjYxOSwzMzUuMTU2IDk0MSwzNTMuNUMgOTQxLjY2Nyw0NTguODMzIDk0MS42NjcsNTY0LjE2NyA5NDEsNjY5LjVDIDk0MC45ODMsNzA4LjczOSA5MzcuOTgzLDc0Ny43MzkgOTMyLDc4Ni41QyA5MjYuOTA0LDgyMC4xNTYgOTE0LjIzNyw4NTAuNDkgODk0LDg3Ny41QyA4NzAuMDM3LDkwMy43NCA4NDAuNTM3LDkyMC41NzQgODA1LjUsOTI4QyA3NzguODI4LDkzNC4wNDIgNzUxLjgyOCw5MzcuNzA5IDcyNC41LDkzOUMgNzA1Ljg0NCw5MzkuOTYzIDY4Ny4xNzgsOTQwLjYyOSA2NjguNSw5NDFDIDU2My44MzMsOTQxLjY2NyA0NTkuMTY3LDk0MS42NjcgMzU0LjUsOTQxQyAzMTQuOTI2LDk0MS4wMyAyNzUuNTkzLDkzOC4wMyAyMzYuNSw5MzJDIDE1Ni44NjcsOTIwLjM2MyAxMDkuMDMzLDg3NS4xOTcgOTMsNzk2LjVDIDg3LjE2MTIsNzY2LjExMiA4My44Mjc5LDczNS40NDYgODMsNzA0LjVDIDgxLjkwNzIsNjQwLjE3NCA4MS40MDcyLDU3NS44NCA4MS41LDUxMS41QyA4MS40MDcyLDQ0Ny4xNiA4MS45MDcyLDM4Mi44MjYgODMsMzE4LjVDIDgzLjU3NjQsMjgwLjU1NCA4OC41NzY0LDI0My4yMjEgOTgsMjA2LjVDIDExNS4yODksMTQ3LjU0NSAxNTMuNzg5LDExMC43MTIgMjEzLjUsOTZDIDI0MS40NDYsODkuMjk4MyAyNjkuNzc5LDg1LjI5ODMgMjk4LjUsODRDIDMxNy4zMjgsODMuMjAxOSAzMzUuOTk1LDgyLjM2ODYgMzU0LjUsODEuNSBaIi8+PC9nPgo8Zz48cGF0aCBzdHlsZT0ib3BhY2l0eToxIiBmaWxsPSIjZDFjZGM3IiBkPSJNIDMzNS41LDE3OS41IEMgNDAwLjEwOCwxNzcuODg3IDQ1MC45NDEsMjAzLjIyMSA0ODgsMjU1LjVDIDQ5OS44NDIsMjc0LjM1IDUwOC4xNzUsMjk0LjY4MyA1MTMsMzE2LjVDIDUxOS43ODQsMzMyLjI4NCA1MzEuNjE4LDM0MS43ODQgNTQ4LjUsMzQ1QyA1NjMuNTA1LDM0NSA1NzguNTA1LDM0NC41IDU5My41LDM0My41QyA2NzAuNjg2LDM0NS4wMTcgNzM0LjUxOSwzNzQuNjgzIDc4NSw0MzIuNUMgODQwLjc1OCw1MDIuOTU2IDg1Ni40MjQsNTgxLjYyMyA4MzIsNjY4LjVDIDgwNC4xNjcsNzQ5LjY2NyA3NDkuNjY3LDgwNC4xNjcgNjY4LjUsODMyQyA1NzcuOTE5LDg1Ny4wOTggNDk2LjkxOSw4MzkuNDMxIDQyNS41LDc3OUMgMzk1Ljc0Niw3NTEuMzM2IDM3My41NzksNzE4LjUwMiAzNTksNjgwLjVDIDM1My4wMDEsNjU5LjgzOCAzNDcuMDAxLDYzOS4xNzIgMzQxLDYxOC41QyAzMjMuMjM1LDU2OC43NTIgMjk1LjA2OCw1MjUuOTE5IDI1Ni41LDQ5MEMgMTkwLjk0NSw0NDEuMzQ3IDE2Ny43NzgsMzc3LjE4IDE4NywyOTcuNUMgMjEyLjM3MiwyMjcuNzM4IDI2MS44NzIsMTg4LjQwNSAzMzUuNSwxNzkuNSBaIi8+PC9nPgo8Zz48cGF0aCBzdHlsZT0ib3BhY2l0eToxIiBmaWxsPSIjM2I1YTE4IiBkPSJNIDM0NC41LDE5Ni41IEMgNDAwLjQyNiwxOTcuODcxIDQ0My45MjYsMjIxLjUzNyA0NzUsMjY3LjVDIDQ4NS4xMDUsMjg1LjA0OCA0OTIuNDM4LDMwMy43MTUgNDk3LDMyMy41QyA1MDcuNTQ5LDM0Ny4wMzMgNTI1LjcxNiwzNjAuMiA1NTEuNSwzNjNDIDYzNy41MDMsMzUxLjc3MyA3MTAuMDAzLDM3Ny42MDcgNzY5LDQ0MC41QyA4MjUuNDUyLDUxMC4xOTMgODM5Ljc4NSw1ODcuODYgODEyLDY3My41QyA3ODEuNTU2LDc1MC4yNzggNzI2LjM4OSw3OTkuMTEyIDY0Ni41LDgyMEMgNTU2LjU5NCw4MzcuNTg1IDQ4MC40MjgsODEzLjA4NSA0MTgsNzQ2LjVDIDM5OS41ODUsNzI0LjcxIDM4NS4yNTIsNzAwLjM3NyAzNzUsNjczLjVDIDM2OSw2NTIuODMzIDM2Myw2MzIuMTY3IDM1Nyw2MTEuNUMgMzM1LjEyNCw1NTAuODY4IDI5OC45NTcsNTAwLjcwMiAyNDguNSw0NjFDIDIwMi4xMzksNDE2LjczIDE4Ny4zMDUsMzYzLjU2MyAyMDQsMzAxLjVDIDIyMi44MzksMjQ5LjMyOCAyNTkuMDA2LDIxNS44MjggMzEyLjUsMjAxQyAzMjMuMjA1LDE5OC42ODUgMzMzLjg3MiwxOTcuMTg1IDM0NC41LDE5Ni41IFoiLz48L2c+CjxnPjxwYXRoIHN0eWxlPSJvcGFjaXR5OjEiIGZpbGw9IiM5M2NmZmIiIGQ9Ik0gMzQwLjUsMjMxLjUgQyAzOTcuMDg0LDIzMS45NTQgNDM1LjkxOCwyNTguMjg3IDQ1NywzMTAuNUMgNDY4LjQ1MSwzNjQuNDU1IDUwMS42MTgsMzkzLjc4OCA1NTYuNSwzOTguNUMgNjM5LjI1LDM4Ny4xNDggNzA1Ljc1LDQxNC40ODEgNzU2LDQ4MC41QyA3OTQuMyw1MzkuMjM5IDgwMS4zLDYwMS41NzMgNzc3LDY2Ny41QyA3NDkuMjk1LDczMC44NjcgNzAxLjc5NSw3NzAuNyA2MzQuNSw3ODdDIDU1MC4yMzksODAwLjkyNyA0ODIuNDA2LDc3NC4wOTQgNDMxLDcwNi41QyA0MjIuNzE0LDY5NC4yNjUgNDE1LjcxNCw2ODEuMjY1IDQxMCw2NjcuNUMgNDAyLjYyLDY0MS4zMTQgMzk0LjYyLDYxNS4zMTQgMzg2LDU4OS41QyAzNjEuMjA3LDUyNy4zODkgMzIyLjcwNyw0NzUuNTU2IDI3MC41LDQzNEMgMjMxLjg1NywzOTUuNDU1IDIyMi4zNTcsMzUwLjYyMiAyNDIsMjk5LjVDIDI2Mi42MzEsMjU5LjEwNSAyOTUuNDY1LDIzNi40MzggMzQwLjUsMjMxLjUgWiIvPjwvZz4KPC9zdmc+Cg==",
+                "oc.keyword": "napari",
+                "oc.launch": "napari.napari",
+                "oc.name": "napari",
+                "oc.path": "/opt/conda/envs/napari/bin/naparia",
+                "oc.rules": "{\"homedir\":{\"default\":true}}",
+                "oc.showinview": "dock",
+                "oc.template": "abcdesktopio/oc.template.ubuntu.22.04",
+                "oc.type": "app",
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "22.04"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 11658218757,
+        "VirtualSize": 11658218757,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/ebe5856a56ccb58b9376f92bb1fb87e20c712818a4f3eae09fc0fd7b0a9648d6/diff:/var/lib/docker/overlay2/fcaf7fdb7897fbbed952a769aa095c78323be22d6e83bcea74d7f05d160d41d4/diff:/var/lib/docker/overlay2/28319b22c06eba0594eb27a3efdd1bd6e984396aaf418cd79ecc373580055021/diff:/var/lib/docker/overlay2/47012bc509c05621c1051fc1d5d31a27618fa174f4320716804a7a36ae1765a1/diff:/var/lib/docker/overlay2/23f68d595408f3624dcd650c827eb1fa6fe2893ee323383648130b66dbd4bdf4/diff:/var/lib/docker/overlay2/55f74b7f3cb900d628e5186b7a70b72a21b0b3942766427b0cd736a10eeabfb2/diff:/var/lib/docker/overlay2/1714e6e30359cb465e031027b63b871695bbdd15658bb89fb50b74c5a9377ceb/diff:/var/lib/docker/overlay2/e16b6fbfc040285c270dc24cf94854e5756f233cd6051c86b1d33e6a830021ba/diff:/var/lib/docker/overlay2/d14795ee406178060bd89179e1d5b7b79b1d4202312e68889de3438ec713285e/diff:/var/lib/docker/overlay2/b9d60ad626b7afa6c552893d745ad257b3cc25ecbf5038ac062b21600dabd6af/diff:/var/lib/docker/overlay2/80f4b53202208d6717b22b85b13ba842d0e3945230bb1c93187bc477a7ab4115/diff:/var/lib/docker/overlay2/40a6df8f61c93187eb2afa1bbf1f7da35a88ea480e19077a96338de631584c4a/diff:/var/lib/docker/overlay2/0499021be13a2f54b8558f4a7c06ecb1210ad89e6a3192d5b02821957560240a/diff:/var/lib/docker/overlay2/94dcf5f09047867e2bcdebc00ec250658f7c8903e48c949409db97a8b9b3afe3/diff:/var/lib/docker/overlay2/ef647ed9dc567a870d09066d7273ce3cf98c5dc1a43f4edc5f8a556a676c4fc8/diff:/var/lib/docker/overlay2/73ea067717cf0fd2f4ad87d94ed511d160dff0a009c9848bdfaa83464f51eb8c/diff:/var/lib/docker/overlay2/52eb7bcc88171bc80e623462080085540f894f669b4ef5e2ec60627e5783afbd/diff:/var/lib/docker/overlay2/ca44d85f8f954c2c3f53e8f18ab211fd6b9e8909141069dbaa823f4cf731e1e5/diff:/var/lib/docker/overlay2/9cbc50ada6c786e86eba749d3563885a1d5acab0b2ab4d836ada5e501955aafa/diff",
+                "MergedDir": "/var/lib/docker/overlay2/e019a38b78ee5e3662f95ee3263187ceaaee671ad20a5563870b6cdc933dae5e/merged",
+                "UpperDir": "/var/lib/docker/overlay2/e019a38b78ee5e3662f95ee3263187ceaaee671ad20a5563870b6cdc933dae5e/diff",
+                "WorkDir": "/var/lib/docker/overlay2/e019a38b78ee5e3662f95ee3263187ceaaee671ad20a5563870b6cdc933dae5e/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:629ca62fb7c791374ce57626d6b8b62c76378be091a0daf1a60d32700b49add7",
+                "sha256:a29bcbe21ee678015a40a4e4f369d2a3131d9fec127ddf3cc7d5ecaaca13334f",
+                "sha256:6ff6f940ecc034f420dff71785442af2e6702461e88d4b6c283c515801ddb48d",
+                "sha256:ce7b64f35ee4e33c111b4404cbe26ee1c01240794977296f4d32237d32c681b8",
+                "sha256:95d1e59db17dcff889c3f387068b3cd8cf14c03e75ff3703b702f9e92b7552f1",
+                "sha256:12d1574ae2b90448b3601dfa5e40e61c72ded629a37bf7a5f7bb1cc5f536ba56",
+                "sha256:051d96dae393caccd24c1f2ae9fb5fb7d832b3ff4b8743e6cc8f38ccbe70acb4",
+                "sha256:e014c5a39ba86a84939a72d6187d6f4333563a7784ffc401a796dd3981c2e0ae",
+                "sha256:ce5aae48c0a41c5853b9c2eb2ea4d7b6d2b3d3ebe001a0fdec3375fe16bb2213",
+                "sha256:44e618a243f3b1842201f855d02e8cfa1e5a9988967d687a20b800d997d2932a",
+                "sha256:af03da5825df0bc771c731b87a01ff0d5a56ec303d06e82341360122b9ef6086",
+                "sha256:88d32a0ed0f82d6c31a2369ffaacc856e41b0a2e43e6fafb6fd9e2eac870725e",
+                "sha256:e3ba6736606481253c0e3ab989c6221ac86df495ecd90952913f1332aaeb5e64",
+                "sha256:2218953bb4a380450a33ac0f2d7fc78a3be1f95272a080560702ae43b4cc4a51",
+                "sha256:5a46ea471b6e868a53d0a8dc444eacbb3b63789fef4150780174920286a19b98",
+                "sha256:395285a55b7d05c2e67c9fdb7c198aecabb6871fd5f7c258f5d8846ce67dc723",
+                "sha256:9e6c78c8c6b5edcf1bd4762b4589d1486ee6490f270b92c676423a46287cb631",
+                "sha256:9cfbe9e9cb0772f4417a2e073d4ea1404365f15613297321f59fada789b09d05",
+                "sha256:2030e8d332d40f1b07dd2cce5ae536e9aca0286b3c5cb6e4628d0d4b9f20d1b3",
+                "sha256:0b17290ab023b87bbfbb79fcaa7ac691ebad4cadb81d084b3969d6ce321de839"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]

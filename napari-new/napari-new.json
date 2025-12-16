@@ -1,0 +1,92 @@
+[
+    {
+        "Id": "sha256:5a4a9da20aca6af330c11b0d05a3a45b993ce3a7a732fa2c82773dca063df279",
+        "RepoTags": [
+            "registry.git.embl.org/grp-cbbcs/abcdesktop-apps/napari-new:latest"
+        ],
+        "RepoDigests": [
+            "registry.git.embl.org/grp-cbbcs/abcdesktop-apps/napari-new@sha256:df3d3edd2909764068a66b45617a0fd32a93a484e55104934d91198b32be6ccc"
+        ],
+        "Parent": "",
+        "Comment": "",
+        "Created": "2025-10-21T09:19:50.683019439Z",
+        "DockerVersion": "",
+        "Author": "Alexandre DEVELY",
+        "Config": {
+            "User": "root",
+            "Env": [
+                "PATH=/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "DEBCONF_FRONTEND=noninteractive",
+                "TERM=linux",
+                "LANG=en_US.utf8",
+                "BUSER=balloon",
+                "DEBIAN_FRONTEND=noninteractive",
+                "TZ=Europe/Berlin",
+                "QT_XCB_NO_MITSHM=1",
+                "NVIDIA_DRIVER_CAPABILITIES=compute,utility",
+                "APPNAME=napari-n",
+                "APPBIN=/opt/conda/envs/napari/bin/napari",
+                "APP=/opt/conda/envs/napari/bin/napari",
+                "CONDA_BIN_PATH=/opt/conda/bin"
+            ],
+            "Cmd": [
+                "/composer/appli-docker-entrypoint.sh"
+            ],
+            "WorkingDir": "/tmp",
+            "Labels": {
+                "oc.acl": "{\"permit\":[\"all\"]}",
+                "oc.cat": "development",
+                "oc.displayname": "Napari 0.6.3",
+                "oc.icon": "napari-logo.svg",
+                "oc.icondata": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjEwMjRweCIgaGVpZ2h0PSIxMDI0cHgiIHN0eWxlPSJzaGFwZS1yZW5kZXJpbmc6Z2VvbWV0cmljUHJlY2lzaW9uOyB0ZXh0LXJlbmRlcmluZzpnZW9tZXRyaWNQcmVjaXNpb247IGltYWdlLXJlbmRlcmluZzpvcHRpbWl6ZVF1YWxpdHk7IGZpbGwtcnVsZTpldmVub2RkOyBjbGlwLXJ1bGU6ZXZlbm9kZCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgo8Zz48cGF0aCBzdHlsZT0ib3BhY2l0eToxIiBmaWxsPSIjM2IzNzQ1IiBkPSJNIDM1NC41LDgxLjUgQyA0NTkuMTY3LDgxLjMzMzMgNTYzLjgzNCw4MS41IDY2OC41LDgyQyA3MDMuOTgzLDgyLjE0MDcgNzM5LjMxNyw4NC40NzQxIDc3NC41LDg5QyA4MDMuMDA0LDkyLjU0MTMgODMwLjAwNCwxMDAuODc1IDg1NS41LDExNEMgODg0LjkyNSwxMzAuNzU4IDkwNS43NTgsMTU0LjkyNSA5MTgsMTg2LjVDIDkzMC44MTMsMjIyLjcwNCA5MzcuODEzLDI2MC4wMzggOTM5LDI5OC41QyA5MzkuOTUyLDMxNi44MjMgOTQwLjYxOSwzMzUuMTU2IDk0MSwzNTMuNUMgOTQxLjY2Nyw0NTguODMzIDk0MS42NjcsNTY0LjE2NyA5NDEsNjY5LjVDIDk0MC45ODMsNzA4LjczOSA5MzcuOTgzLDc0Ny43MzkgOTMyLDc4Ni41QyA5MjYuOTA0LDgyMC4xNTYgOTE0LjIzNyw4NTAuNDkgODk0LDg3Ny41QyA4NzAuMDM3LDkwMy43NCA4NDAuNTM3LDkyMC41NzQgODA1LjUsOTI4QyA3NzguODI4LDkzNC4wNDIgNzUxLjgyOCw5MzcuNzA5IDcyNC41LDkzOUMgNzA1Ljg0NCw5MzkuOTYzIDY4Ny4xNzgsOTQwLjYyOSA2NjguNSw5NDFDIDU2My44MzMsOTQxLjY2NyA0NTkuMTY3LDk0MS42NjcgMzU0LjUsOTQxQyAzMTQuOTI2LDk0MS4wMyAyNzUuNTkzLDkzOC4wMyAyMzYuNSw5MzJDIDE1Ni44NjcsOTIwLjM2MyAxMDkuMDMzLDg3NS4xOTcgOTMsNzk2LjVDIDg3LjE2MTIsNzY2LjExMiA4My44Mjc5LDczNS40NDYgODMsNzA0LjVDIDgxLjkwNzIsNjQwLjE3NCA4MS40MDcyLDU3NS44NCA4MS41LDUxMS41QyA4MS40MDcyLDQ0Ny4xNiA4MS45MDcyLDM4Mi44MjYgODMsMzE4LjVDIDgzLjU3NjQsMjgwLjU1NCA4OC41NzY0LDI0My4yMjEgOTgsMjA2LjVDIDExNS4yODksMTQ3LjU0NSAxNTMuNzg5LDExMC43MTIgMjEzLjUsOTZDIDI0MS40NDYsODkuMjk4MyAyNjkuNzc5LDg1LjI5ODMgMjk4LjUsODRDIDMxNy4zMjgsODMuMjAxOSAzMzUuOTk1LDgyLjM2ODYgMzU0LjUsODEuNSBaIi8+PC9nPgo8Zz48cGF0aCBzdHlsZT0ib3BhY2l0eToxIiBmaWxsPSIjZDFjZGM3IiBkPSJNIDMzNS41LDE3OS41IEMgNDAwLjEwOCwxNzcuODg3IDQ1MC45NDEsMjAzLjIyMSA0ODgsMjU1LjVDIDQ5OS44NDIsMjc0LjM1IDUwOC4xNzUsMjk0LjY4MyA1MTMsMzE2LjVDIDUxOS43ODQsMzMyLjI4NCA1MzEuNjE4LDM0MS43ODQgNTQ4LjUsMzQ1QyA1NjMuNTA1LDM0NSA1NzguNTA1LDM0NC41IDU5My41LDM0My41QyA2NzAuNjg2LDM0NS4wMTcgNzM0LjUxOSwzNzQuNjgzIDc4NSw0MzIuNUMgODQwLjc1OCw1MDIuOTU2IDg1Ni40MjQsNTgxLjYyMyA4MzIsNjY4LjVDIDgwNC4xNjcsNzQ5LjY2NyA3NDkuNjY3LDgwNC4xNjcgNjY4LjUsODMyQyA1NzcuOTE5LDg1Ny4wOTggNDk2LjkxOSw4MzkuNDMxIDQyNS41LDc3OUMgMzk1Ljc0Niw3NTEuMzM2IDM3My41NzksNzE4LjUwMiAzNTksNjgwLjVDIDM1My4wMDEsNjU5LjgzOCAzNDcuMDAxLDYzOS4xNzIgMzQxLDYxOC41QyAzMjMuMjM1LDU2OC43NTIgMjk1LjA2OCw1MjUuOTE5IDI1Ni41LDQ5MEMgMTkwLjk0NSw0NDEuMzQ3IDE2Ny43NzgsMzc3LjE4IDE4NywyOTcuNUMgMjEyLjM3MiwyMjcuNzM4IDI2MS44NzIsMTg4LjQwNSAzMzUuNSwxNzkuNSBaIi8+PC9nPgo8Zz48cGF0aCBzdHlsZT0ib3BhY2l0eToxIiBmaWxsPSIjM2I1YTE4IiBkPSJNIDM0NC41LDE5Ni41IEMgNDAwLjQyNiwxOTcuODcxIDQ0My45MjYsMjIxLjUzNyA0NzUsMjY3LjVDIDQ4NS4xMDUsMjg1LjA0OCA0OTIuNDM4LDMwMy43MTUgNDk3LDMyMy41QyA1MDcuNTQ5LDM0Ny4wMzMgNTI1LjcxNiwzNjAuMiA1NTEuNSwzNjNDIDYzNy41MDMsMzUxLjc3MyA3MTAuMDAzLDM3Ny42MDcgNzY5LDQ0MC41QyA4MjUuNDUyLDUxMC4xOTMgODM5Ljc4NSw1ODcuODYgODEyLDY3My41QyA3ODEuNTU2LDc1MC4yNzggNzI2LjM4OSw3OTkuMTEyIDY0Ni41LDgyMEMgNTU2LjU5NCw4MzcuNTg1IDQ4MC40MjgsODEzLjA4NSA0MTgsNzQ2LjVDIDM5OS41ODUsNzI0LjcxIDM4NS4yNTIsNzAwLjM3NyAzNzUsNjczLjVDIDM2OSw2NTIuODMzIDM2Myw2MzIuMTY3IDM1Nyw2MTEuNUMgMzM1LjEyNCw1NTAuODY4IDI5OC45NTcsNTAwLjcwMiAyNDguNSw0NjFDIDIwMi4xMzksNDE2LjczIDE4Ny4zMDUsMzYzLjU2MyAyMDQsMzAxLjVDIDIyMi44MzksMjQ5LjMyOCAyNTkuMDA2LDIxNS44MjggMzEyLjUsMjAxQyAzMjMuMjA1LDE5OC42ODUgMzMzLjg3MiwxOTcuMTg1IDM0NC41LDE5Ni41IFoiLz48L2c+CjxnPjxwYXRoIHN0eWxlPSJvcGFjaXR5OjEiIGZpbGw9IiM5M2NmZmIiIGQ9Ik0gMzQwLjUsMjMxLjUgQyAzOTcuMDg0LDIzMS45NTQgNDM1LjkxOCwyNTguMjg3IDQ1NywzMTAuNUMgNDY4LjQ1MSwzNjQuNDU1IDUwMS42MTgsMzkzLjc4OCA1NTYuNSwzOTguNUMgNjM5LjI1LDM4Ny4xNDggNzA1Ljc1LDQxNC40ODEgNzU2LDQ4MC41QyA3OTQuMyw1MzkuMjM5IDgwMS4zLDYwMS41NzMgNzc3LDY2Ny41QyA3NDkuMjk1LDczMC44NjcgNzAxLjc5NSw3NzAuNyA2MzQuNSw3ODdDIDU1MC4yMzksODAwLjkyNyA0ODIuNDA2LDc3NC4wOTQgNDMxLDcwNi41QyA0MjIuNzE0LDY5NC4yNjUgNDE1LjcxNCw2ODEuMjY1IDQxMCw2NjcuNUMgNDAyLjYyLDY0MS4zMTQgMzk0LjYyLDYxNS4zMTQgMzg2LDU4OS41QyAzNjEuMjA3LDUyNy4zODkgMzIyLjcwNyw0NzUuNTU2IDI3MC41LDQzNEMgMjMxLjg1NywzOTUuNDU1IDIyMi4zNTcsMzUwLjYyMiAyNDIsMjk5LjVDIDI2Mi42MzEsMjU5LjEwNSAyOTUuNDY1LDIzNi40MzggMzQwLjUsMjMxLjUgWiIvPjwvZz4KPC9zdmc+Cg==",
+                "oc.keyword": "napari",
+                "oc.launch": "napari-n.napari",
+                "oc.name": "napari-n",
+                "oc.path": "/opt/conda/envs/napari/bin/napari",
+                "oc.rules": "{\"homedir\":{\"default\":true}}",
+                "oc.showinview": "dock",
+                "oc.template": "abcdesktopio/oc.template.ubuntu.22.04",
+                "oc.type": "app",
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "22.04"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 16728821692,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/78ea73f9a5de499427df1a23b68ffcd468bcaa4fea2dc9152f42913f3cdc38ef/diff:/var/lib/docker/overlay2/b5d2010006e15820c0d1d1c477d214c8fd8c7258097a8faa8870daa8de8e670b/diff:/var/lib/docker/overlay2/a5834ae0cfd0d1ec97d2baf7cdddfca038973927a8d4bad7a9833987ff5c8d80/diff:/var/lib/docker/overlay2/8fd50422f0c4259034e9c5fd0e559606236a1bc3c3305ec61882d5a3dd9844b3/diff:/var/lib/docker/overlay2/99fd06b93a8da2c0c0caaa843e9bd06a39af9f909ddcde017c30679358421303/diff:/var/lib/docker/overlay2/f3faee91504fa7e5ec9ecb94cb3bacb2d30a74c91e18063f4acf846544dadaf5/diff:/var/lib/docker/overlay2/a8ea5d7c878d17c94e898c0647230a86e81aa293a2c33937a75959410016b040/diff:/var/lib/docker/overlay2/15a48368c3340bb815a6c19b26ee2cbebca540a7d9175b6a0100d3117fd09d68/diff:/var/lib/docker/overlay2/bd07aa545ef9a66f59eaed5d58b2facafadcbee33db042fc617ee31ed4acaf0f/diff:/var/lib/docker/overlay2/b529df241b63c6fb415565c6682f4dffe470ca9655177c934d4dee38f214bdbb/diff:/var/lib/docker/overlay2/2a25b13c6373a15e30bd634fd6910e2a064a3bf8fd1ac9e48c1a87310d4109d0/diff:/var/lib/docker/overlay2/bd6e67fc0b4b028e679fe29752cfc382d9051c6c2e39cbae7d51d92b47f50590/diff:/var/lib/docker/overlay2/1b4709ade52d63f72a32d056a388758ab88808d5913294e6eaced984168ba723/diff:/var/lib/docker/overlay2/0953daf3aadb1ec81ecf53321875fde56d258c9b4c08e8cc4db67120b674ca1c/diff:/var/lib/docker/overlay2/d2ccc0566cf6c25aca3a5f7a75da3cbeffb8ad9a7f73d51c657fd5d4bf1bd794/diff:/var/lib/docker/overlay2/4ae61ccab4f7d8886d45f94b1d516f851d6b453a28ea33a95236c39fd09bf8cf/diff",
+                "MergedDir": "/var/lib/docker/overlay2/d9df7790e8045a64ed4398f0aec396b2690b9d6a4f9c407f74a2855e6aad1030/merged",
+                "UpperDir": "/var/lib/docker/overlay2/d9df7790e8045a64ed4398f0aec396b2690b9d6a4f9c407f74a2855e6aad1030/diff",
+                "WorkDir": "/var/lib/docker/overlay2/d9df7790e8045a64ed4398f0aec396b2690b9d6a4f9c407f74a2855e6aad1030/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:2573e0d8158209ed54ab25c87bcdcb00bd3d2539246960a3d592a1c599d70465",
+                "sha256:be220c32bfab16267a86ea5dee3a04cc74d39e6f325d30fbbe092a303b89668e",
+                "sha256:1fd84a11ad61bdd80b932b561d3aca2e96d87de3849e2acf7ae0a725b5f651bf",
+                "sha256:b69fdd695296b606ea00d88cd5d0bd6f022f24e6c6ccf2ee1723420c8d157dab",
+                "sha256:fddf082950dbe164542464808347363d5c6ef52362cca23f0b611f439965c576",
+                "sha256:33c3cd5d2b4a2627852b7d020b517ed17b74745a24de1772ff39b6f821bf6911",
+                "sha256:8499b511c9e3bce4c7d6dd863df1d32da91ba694c3335feb5bfbf1c9420dda60",
+                "sha256:421cc8f7644d1ae392e5b2dc18d542d159ff52d58803eff52c15f6c7f1c805f1",
+                "sha256:57864f8fbc01512a04af934894e9a01aecd03e078398c6a490c1a8923a68da01",
+                "sha256:e325e17fd928b527126fb0c01663493da722880962791b8104b68d106e98cd52",
+                "sha256:077a15d8b41804d1977ac33abf863f749f196cd1613a028a20671a92594324d9",
+                "sha256:e559346b5250f12a8217da9ca328ee904e0be5fc093cdb02ba1adad351f7b632",
+                "sha256:194ada8476caf15d672ca98f470fd5439fd82a9a4bf00e28c6daace8d10275de",
+                "sha256:29bf3895896b306abcb1db04599ef660e2bf7635d07dbe67670551f343519132",
+                "sha256:dd9bd73eceb8c62c670dd55608f1c92fb3215fc13ff92a944e0b2122192c3224",
+                "sha256:d487284d71517ac4bf22bd860ef6dd9ef9a3fe81f4685841283d40962d42fefc",
+                "sha256:696bc4c1d787966e9829cf9696d085f7ed75b35ee5fa092072d6d7d844be1a52"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]

@@ -1,0 +1,44 @@
+ARG BASE_IMAGE=nvidia/cuda:11.8.0-runtime-rockylinux8
+FROM ${BASE_IMAGE}
+
+RUN mkdir -p /composer/init.d
+COPY etc/ /etc
+
+RUN  dnf update -y && \
+     dnf install -y --allowerasing \
+     glibc-langpack-en \
+     cups-client \
+     pulseaudio-libs \
+     curl \
+     xorg-x11-xauth \
+     && dnf -y clean all \
+     && rm -rf /var/cache 
+
+ENV LANG en_US.utf8
+
+COPY composer /composer
+
+RUN    dnf update -y \
+    && dnf module -y enable nodejs:18 \
+    && dnf install -y nodejs \ 
+    && dnf clean -y all \
+    && rm -rf /var/cache
+
+# Add nodejs service
+RUN cd /composer/node/ocrun && npm install  
+
+
+##########
+# Next command use $BUSER context
+ENV BUSER balloon
+RUN groupadd --gid 4096 $BUSER
+RUN useradd --create-home --shell /bin/bash --uid 4096 -g $BUSER --groups $BUSER $BUSER
+
+RUN echo "balloon:lmdpocpetit" | chpasswd $BUSER
+
+RUN mkdir -p /var/log/desktop && \
+    chown -R $BUSER:$BUSER /home/$BUSER /var/log/desktop
+
+RUN dnf install -y epel-release
+
+

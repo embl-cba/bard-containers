@@ -1,0 +1,2 @@
+mkdir -p /home/balloon/Downloads
+ln -s /usr/bin/ntlm_auth.desktop ~/ntlm_auth

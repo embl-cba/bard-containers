@@ -1,0 +1,127 @@
+[
+    {
+        "Id": "sha256:199ae383de1516ef5033d076e76ed6c7dab37967998d5e5ef4a79049635ab6f1",
+        "RepoTags": [
+            "registry.git.embl.org/grp-cbbcs/abcdesktop-apps/blender-5.0:latest"
+        ],
+        "RepoDigests": [
+            "registry.git.embl.org/grp-cbbcs/abcdesktop-apps/blender-5.0@sha256:d1e34b6c74203095cf257cdfd58c96dd7a5576754ad040ac0d6d491e3df1a932"
+        ],
+        "Parent": "",
+        "Comment": "",
+        "Created": "2025-11-28T11:36:55.78890983Z",
+        "DockerVersion": "",
+        "Author": "",
+        "Config": {
+            "Env": [
+                "PATH=/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NVARCH=x86_64",
+                "NVIDIA_REQUIRE_CUDA=cuda>=12.3 brand=tesla,driver>=470,driver<471 brand=unknown,driver>=470,driver<471 brand=nvidia,driver>=470,driver<471 brand=nvidiartx,driver>=470,driver<471 brand=geforce,driver>=470,driver<471 brand=geforcertx,driver>=470,driver<471 brand=quadro,driver>=470,driver<471 brand=quadrortx,driver>=470,driver<471 brand=titan,driver>=470,driver<471 brand=titanrtx,driver>=470,driver<471 brand=tesla,driver>=525,driver<526 brand=unknown,driver>=525,driver<526 brand=nvidia,driver>=525,driver<526 brand=nvidiartx,driver>=525,driver<526 brand=geforce,driver>=525,driver<526 brand=geforcertx,driver>=525,driver<526 brand=quadro,driver>=525,driver<526 brand=quadrortx,driver>=525,driver<526 brand=titan,driver>=525,driver<526 brand=titanrtx,driver>=525,driver<526 brand=tesla,driver>=535,driver<536 brand=unknown,driver>=535,driver<536 brand=nvidia,driver>=535,driver<536 brand=nvidiartx,driver>=535,driver<536 brand=geforce,driver>=535,driver<536 brand=geforcertx,driver>=535,driver<536 brand=quadro,driver>=535,driver<536 brand=quadrortx,driver>=535,driver<536 brand=titan,driver>=535,driver<536 brand=titanrtx,driver>=535,driver<536",
+                "NV_CUDA_CUDART_VERSION=12.3.101-1",
+                "NV_CUDA_COMPAT_PACKAGE=cuda-compat-12-3",
+                "CUDA_VERSION=12.3.2",
+                "LD_LIBRARY_PATH=/usr/local/nvidia/lib:/usr/local/nvidia/lib64",
+                "NVIDIA_VISIBLE_DEVICES=all",
+                "NVIDIA_DRIVER_CAPABILITIES=all",
+                "NV_CUDA_LIB_VERSION=12.3.2-1",
+                "NV_NVTX_VERSION=12.3.101-1",
+                "NV_LIBNPP_VERSION=12.2.3.2-1",
+                "NV_LIBNPP_PACKAGE=libnpp-12-3=12.2.3.2-1",
+                "NV_LIBCUSPARSE_VERSION=12.2.0.103-1",
+                "NV_LIBCUBLAS_PACKAGE_NAME=libcublas-12-3",
+                "NV_LIBCUBLAS_VERSION=12.3.4.1-1",
+                "NV_LIBCUBLAS_PACKAGE=libcublas-12-3=12.3.4.1-1",
+                "NV_LIBNCCL_PACKAGE_NAME=libnccl2",
+                "NV_LIBNCCL_PACKAGE_VERSION=2.20.3-1",
+                "NCCL_VERSION=2.20.3-1",
+                "NV_LIBNCCL_PACKAGE=libnccl2=2.20.3-1+cuda12.3",
+                "NVIDIA_PRODUCT_NAME=CUDA",
+                "DEBCONF_FRONTEND=noninteractive",
+                "TERM=linux",
+                "LANG=en_US.utf8",
+                "BUSER=balloon",
+                "BLENDER_USER_SCRIPTS=/opt/blender-addons/scripts/",
+                "BLENDER_USER_CONFIG=/opt/blender-addons/config/",
+                "VGL_DISPLAY=egl0",
+                "VGL_COMPRESS=proxy",
+                "APPNAME=Blender",
+                "APPBIN=/usr/bin/konsole",
+                "APP=/usr/bin/konsole",
+                "ARGS=--name blender --hold -e vglrun -c proxy /usr/local/bin/blender"
+            ],
+            "Entrypoint": [
+                "/opt/nvidia/nvidia_entrypoint.sh"
+            ],
+            "Cmd": [
+                "sh",
+                "-c",
+                "mkdir -p ~/tmp && /composer/appli-docker-entrypoint.sh "
+            ],
+            "WorkingDir": "/opt/",
+            "Labels": {
+                "maintainer": "NVIDIA CORPORATION <cudatools@nvidia.com>",
+                "oc.acl": "{\"permit\":[\"all\"]}",
+                "oc.args": "--name blender --hold -e vglrun -c proxy /usr/local/bin/blender",
+                "oc.cat": "development",
+                "oc.displayname": "Blender 5.0",
+                "oc.icon": "blender.svg",
+                "oc.icondata": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBzdHlsZT0iY2xpcC1ydWxlOmV2ZW5vZGQ7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjIiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDE4MSAxNDgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8dGl0bGU+QmxlbmRlciBsb2dvICh3aXRob3V0IHRleHQpPC90aXRsZT4KICAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KC4yODEgMCAwIC4yODEgLTQxLjggLTQzLjcpIj4KICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgyMS42IDAgMCAyMS42IC00ODU3IDc2NjUpIj4KICAgICAgICAgICAgPHBhdGggZD0ibTI0My0zMzRjMC4xMDYtMS44OSAxLjAzLTMuNTYgMi40My00Ljc0IDEuMzctMS4xNiAzLjIxLTEuODcgNS4yMy0xLjg3IDIuMDEgMCAzLjg1IDAuNzA5IDUuMjIgMS44NyAxLjQgMS4xOCAyLjMyIDIuODUgMi40MyA0Ljc0IDAuMTA2IDEuOTQtMC42NzUgMy43NS0yLjA0IDUuMDktMS40IDEuMzYtMy4zOCAyLjIyLTUuNjEgMi4yMnMtNC4yMi0wLjg1NC01LjYxLTIuMjJjLTEuMzctMS4zNC0yLjE1LTMuMTQtMi4wNC01LjA4eiIgc3R5bGU9ImZpbGwtcnVsZTpub256ZXJvO2ZpbGw6I2ZmZiIvPgogICAgICAgIDwvZz4KICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxMS4xIDAgMCAxMS4xIC0yMjE1IDQxNTMpIj4KICAgICAgICAgICAgPHBhdGggZD0ibTI0My0zMzRjMC4xMDYtMS44OSAxLjAzLTMuNTYgMi40My00Ljc0IDEuMzctMS4xNiAzLjIxLTEuODcgNS4yMy0xLjg3IDIuMDEgMCAzLjg1IDAuNzA5IDUuMjIgMS44NyAxLjQgMS4xOCAyLjMyIDIuODUgMi40MyA0Ljc0IDAuMTA2IDEuOTQtMC42NzUgMy43NS0yLjA0IDUuMDktMS40IDEuMzYtMy4zOCAyLjIyLTUuNjEgMi4yMnMtNC4yMi0wLjg1NC01LjYxLTIuMjJjLTEuMzctMS4zNC0yLjE1LTMuMTQtMi4wNC01LjA4eiIgc3R5bGU9ImZpbGwtcnVsZTpub256ZXJvO2ZpbGw6IzI2NTc4NyIvPgogICAgICAgICAgICA8cGF0aCBkPSJtMjMxLTMzMGMwLjAxMyAwLjc0IDAuMjQ5IDIuMTggMC42MDMgMy4zIDAuNzQ0IDIuMzggMi4wMSA0LjU4IDMuNzYgNi41MSAxLjggMS45OSA0LjAyIDMuNTkgNi41OCA0LjczIDIuNjkgMS4xOSA1LjYxIDEuOCA4LjY0IDEuOCAzLjAzLTRlLTMgNS45NS0wLjYyNCA4LjY0LTEuODMgMi41Ni0xLjE1IDQuNzgtMi43NSA2LjU4LTQuNzUgMS43Ni0xLjk1IDMuMDItNC4xNSAzLjc2LTYuNTMgMC4zNzUtMS4yIDAuNjEyLTIuNDIgMC43MDctMy42NCAwLjA5My0xLjIgMC4wNTQtMi40MS0wLjExNy0zLjYyLTAuMzM0LTIuMzUtMS4xNS00LjU2LTIuNC02LjU2LTEuMTQtMS44NS0yLjYyLTMuNDYtNC4zOC00LjgybDRlLTMgLTNlLTMgLTE3LjctMTMuNmMtMC4wMTYtMC4wMTItMC4wMjktMC4wMjUtMC4wNDYtMC4wMzYtMS4xNi0wLjg5Mi0zLjEyLTAuODg5LTQuMzkgNWUtMyAtMS4yOSAwLjkwNC0xLjQ0IDIuNC0wLjI5IDMuMzRsLTVlLTMgNWUtMyA3LjM5IDYuMDEtMjIuNSAwLjAyNGgtMC4wM2MtMS44NiAyZS0zIC0zLjY1IDEuMjItNCAyLjc3LTAuMzY0IDEuNTcgMC45IDIuODggMi44NCAyLjg4bC0zZS0zIDdlLTMgMTEuNC0wLjAyMi0yMC40IDE1LjZjLTAuMDI2IDAuMDE5LTAuMDU0IDAuMDM5LTAuMDc4IDAuMDU4LTEuOTIgMS40Ny0yLjU0IDMuOTItMS4zMyA1LjQ2IDEuMjMgMS41NyAzLjg0IDEuNTggNS43OCA5ZS0zbDExLjEtOS4xcy0wLjE2MiAxLjIzLTAuMTQ5IDEuOTZ6bTI4LjYgNC4xMWMtMi4yOSAyLjMzLTUuNSAzLjY2LTguOTYgMy42Ni0zLjQ3IDZlLTMgLTYuNjgtMS4zLTguOTctMy42My0xLjEyLTEuMTQtMS45NC0yLjQ0LTIuNDUtMy44My0wLjQ5Ny0xLjM3LTAuNjktMi44Mi0wLjU2Mi00LjI4IDAuMTIxLTEuNDMgMC41NDctMi44IDEuMjMtNC4wMyAwLjY2OC0xLjIxIDEuNTktMi4zMSAyLjcyLTMuMjQgMi4yMy0xLjgxIDUuMDYtMi44IDguMDItMi44IDIuOTctNGUtMyA1LjggMC45NjkgOC4wMyAyLjc4IDEuMTMgMC45MjQgMi4wNSAyLjAyIDIuNzIgMy4yMyAwLjY4MyAxLjIzIDEuMTEgMi41OSAxLjIzIDQuMDMgMC4xMjYgMS40Ni0wLjA2NyAyLjkxLTAuNTY0IDQuMjgtMC41MDggMS40LTEuMzMgMi43LTIuNDUgMy44NHoiIHN0eWxlPSJmaWxsLXJ1bGU6bm9uemVybztmaWxsOiNlYTc2MDAiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=",
+                "oc.keyword": "blender",
+                "oc.launch": "blender.konsole",
+                "oc.name": "blender",
+                "oc.path": "/usr/bin/konsole",
+                "oc.rules": "{\"homedir\":{\"default\":true}}",
+                "oc.showinview": "dock",
+                "oc.template": "abcdesktopio/oc.template.gtk",
+                "oc.type": "app",
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "22.04"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 6348051182,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/87c136a1a2609000ef6cff3a2d462952d2e242678fe8a11005bc70b06f41fc9d/diff:/var/lib/docker/overlay2/534427300db02202eba0dc3f22c8731c4ffef3e759ab6c7007c1419737a4225a/diff:/var/lib/docker/overlay2/1df2fb75df3bf1f68a4386449ad508f63425ab619c21218f267555ec53e59f3d/diff:/var/lib/docker/overlay2/d1ccd97a30563fe0c4614fd21adb2c8e91124a6c55e22e5ac86bd3d1ebbabea9/diff:/var/lib/docker/overlay2/b3fc3ddcbd6ffd4050703a7a6be56e3fde5f545a3c49f11a3f29f5c4f10bdf63/diff:/var/lib/docker/overlay2/291612c8b32da16e4ff06c13d51e0c1093e2fc0e0ee6b2693321462a8e037ca3/diff:/var/lib/docker/overlay2/b6054f562567f43f41723b857b61b046180d4da9833238da45fb22d1065cc599/diff:/var/lib/docker/overlay2/389086a6cfb803b2e30c050eeb1347707c8c509d5195728d9a03a92fd701316b/diff:/var/lib/docker/overlay2/b71e8e9de6c5dbec037b7060eb866b6d4b3e7b83e37da073a3e33938c4ab5131/diff:/var/lib/docker/overlay2/d91f1f8f8d4e0db2719518bf3ed608a20c56ab9123b8fc0a1d79c12238629a24/diff:/var/lib/docker/overlay2/850aef47ffc471aa2fd88e2a5ffc581324d249e0e99e1a2a7e564e00be3acbff/diff:/var/lib/docker/overlay2/921abd89df83e2b425cc05feb3db5e412792f4df53139aa15062807e5f563ada/diff:/var/lib/docker/overlay2/01449ce511393835f722e5fbfc834e3c36a5b7b8d7fca9b4ab0baa623d2dd7cc/diff:/var/lib/docker/overlay2/9a6da37d7afc20170294c493443229e1e22f997b03af817e0858e33e0a476521/diff:/var/lib/docker/overlay2/a5d95792268e1532fb1b8d4573499a9633d24bf3358dfa4e81a401785492d31c/diff:/var/lib/docker/overlay2/2de5955674f6d90007e850d81342b46dd9349679d7571816c25d27a8ecf9bd46/diff:/var/lib/docker/overlay2/258c01b002366319baa72b0fb51da91dbcb926a538ea6be49b0089e446e818b7/diff:/var/lib/docker/overlay2/e3b1d0034f89007d8f6abce1d53bfb2720507a3d0dde0d80a37bd96ef9da8c9e/diff:/var/lib/docker/overlay2/6123748d5f90333ea774341e822d9c4c78dda0d50366702ba3bbcde5e220299a/diff:/var/lib/docker/overlay2/5dc7de679144b3601d8a4f2ca220ff8fb258bc0105daf1e57c4e286849ac6932/diff:/var/lib/docker/overlay2/a597d815a36adef8fe0eb2c611120566aae6de9b083e1b429d680b8c7d24890b/diff:/var/lib/docker/overlay2/7d39987a594e6a35de82f2d42057d48ce5286536e99031bd5f33470157add615/diff:/var/lib/docker/overlay2/df47493c18156731861898d9957677411957e669a26c9a4ceec0377b9e291411/diff:/var/lib/docker/overlay2/5de221c459f0117abf66fd114fbac159100647355d3043d9038a3b1fb56ee736/diff",
+                "MergedDir": "/var/lib/docker/overlay2/c11e124de53d1db2800d142f2a495ae159a726608508a8b03d5bf1cae77acb0f/merged",
+                "UpperDir": "/var/lib/docker/overlay2/c11e124de53d1db2800d142f2a495ae159a726608508a8b03d5bf1cae77acb0f/diff",
+                "WorkDir": "/var/lib/docker/overlay2/c11e124de53d1db2800d142f2a495ae159a726608508a8b03d5bf1cae77acb0f/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:d101c9453715a978a2a520f553588e77dfb4236762175eba61c5c264a449c75d",
+                "sha256:729c5d3b118200af6be5cca2bdc7548eb2de72ab7a0640da086477d7363d9f2d",
+                "sha256:79a854a69fbf657a50e410e9ac692f10e058f6b12789744c9de865306f4027f0",
+                "sha256:4c19793a34324356119cfed8e3189d53f6c4095ea57536daa715d00f961bceec",
+                "sha256:4560852fcfd35ab06880e6bc4f2d68d1806fe6e5a8de4b308483795d61948d4f",
+                "sha256:66200a27585af1ef2bb5ca971d8fa237b01250e68a2a626c632462d8ea60169a",
+                "sha256:1a0ba508ec30f4de9facbbc321cc3cf62477a1d2145bb2c038575478a343bb87",
+                "sha256:d4ba89477cd0b5a7240c9f73830cd8e66d30e1a0ad67a2c908c6ed35754fd120",
+                "sha256:bba420082ab6c0477e6da6dee03a35ae4596287faf8519b9a94cbc362fcaf48d",
+                "sha256:0a593220d9a4115184c7838765c69a8dbad26c5e83daa90da59854f8fc08fc38",
+                "sha256:7538b79ad88d55ba57ddf5f79768bf482860e7a9365bee34a178dd612b6031a6",
+                "sha256:d5625367861bc7e80b5fe5acb5a9285f8e4c1f4c5c277d971bbab526bbf1914c",
+                "sha256:ce5b4ed7b04df68a9977ccfebcda20cf6f5a836d2d921d8c23b8319949bc2da9",
+                "sha256:d7881ea211986a532ac6ae065204b1903ce9c4e07814ecf4595702333b4e4823",
+                "sha256:b15bf79177121d30b6d96380e06351704783a966a64436ec81b307b8a769c3f4",
+                "sha256:257543b4da71e5569650544d50696369807c91515e00c3f585c3a077fd494e4b",
+                "sha256:794e099ec87cda1ff01c58f654f2c01f64c1f980678a01ff7720a0611f154ff5",
+                "sha256:0ba09df4245d6c82d8bc914ba8a24c40c882d9563d741362b31787c56a556efa",
+                "sha256:019aea89a1b4d07f8e1e267c6464f8b9d012c38c1a82519977e442401b63f782",
+                "sha256:882cbc20e956e29d52aea811a736b45c38a28dab72da8399a8804a217627b0ba",
+                "sha256:f132ac38bf77574859207017617a95625d89da67609c1bc9fa120dabb91710f2",
+                "sha256:3f29e0615c5970764508f8fcd2565399958425cb33793542dbd7af19eae015c2",
+                "sha256:f8bbcd568b594745652875266499000f79eef034330096db9ec4f942628f0d78",
+                "sha256:27b0c58d25be011c0485e349324f36532076be24217e5309343f9556a19d8df6",
+                "sha256:052c68221d6b11151770915da421bcd8934d9297e0b6fe6b26eb7e744026daa7"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]

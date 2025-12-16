@@ -1,0 +1,127 @@
+[
+    {
+        "Id": "sha256:ee7e1129074202bbba53eba2570318f1e74ecb1240cbc11c668bceaef4e25230",
+        "RepoTags": [
+            "slurm:latest",
+            "registry.git.embl.de/grp-cbbcs/abcdesktop-apps/slurm:latest"
+        ],
+        "RepoDigests": [
+            "registry.git.embl.de/grp-cbbcs/abcdesktop-apps/slurm@sha256:64e0056036a4ca67d7146dcd5dafddfd08a27aa2700af87be4cdd44f8e04d2ba"
+        ],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2025-02-20T11:19:09.864039583+01:00",
+        "DockerVersion": "",
+        "Author": "Alexandre DEVELY",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NVARCH=x86_64",
+                "NVIDIA_REQUIRE_CUDA=cuda>=12.4 brand=tesla,driver>=470,driver<471 brand=unknown,driver>=470,driver<471 brand=nvidia,driver>=470,driver<471 brand=nvidiartx,driver>=470,driver<471 brand=geforce,driver>=470,driver<471 brand=geforcertx,driver>=470,driver<471 brand=quadro,driver>=470,driver<471 brand=quadrortx,driver>=470,driver<471 brand=titan,driver>=470,driver<471 brand=titanrtx,driver>=470,driver<471 brand=tesla,driver>=525,driver<526 brand=unknown,driver>=525,driver<526 brand=nvidia,driver>=525,driver<526 brand=nvidiartx,driver>=525,driver<526 brand=geforce,driver>=525,driver<526 brand=geforcertx,driver>=525,driver<526 brand=quadro,driver>=525,driver<526 brand=quadrortx,driver>=525,driver<526 brand=titan,driver>=525,driver<526 brand=titanrtx,driver>=525,driver<526 brand=tesla,driver>=535,driver<536 brand=unknown,driver>=535,driver<536 brand=nvidia,driver>=535,driver<536 brand=nvidiartx,driver>=535,driver<536 brand=geforce,driver>=535,driver<536 brand=geforcertx,driver>=535,driver<536 brand=quadro,driver>=535,driver<536 brand=quadrortx,driver>=535,driver<536 brand=titan,driver>=535,driver<536 brand=titanrtx,driver>=535,driver<536",
+                "NV_CUDA_CUDART_VERSION=12.4.127-1",
+                "CUDA_VERSION=12.4.1",
+                "LD_LIBRARY_PATH=/usr/local/nvidia/lib:/usr/local/nvidia/lib64",
+                "NVIDIA_VISIBLE_DEVICES=all",
+                "NVIDIA_DRIVER_CAPABILITIES=compute,utility",
+                "LANG=en_US.utf8",
+                "BUSER=balloon",
+                "TINI_VERSION=v0.19.0",
+                "TINI_SUBREAPER=1",
+                "APPNAME=konsole",
+                "APPBIN=/usr/bin/konsole",
+                "APP=/usr/bin/konsole",
+                "ARGS=--hold -e bash --rcfile /usr/local/bin/startup.sh"
+            ],
+            "Cmd": [
+                "/composer/appli-docker-entrypoint.sh"
+            ],
+            "ArgsEscaped": true,
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "maintainer": "NVIDIA CORPORATION <sw-cuda-installer@nvidia.com>",
+                "oc.acl": "{\"permit\":[\"all\"]}",
+                "oc.args": "--hold -e bash --rcfile /usr/local/bin/startup.sh",
+                "oc.cat": "development",
+                "oc.displayname": "Slurm Konsole",
+                "oc.icon": "konsole.svg",
+                "oc.icondata": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgd2lkdGg9IjEyOCIgaGVpZ2h0PSIxMjgiPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJvIiB4Mj0iMSIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxMTEiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNTU1Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJuIiB4MT0iNTUuOTUiIHgyPSI1NS45NSIgeTE9IjgxIiB5Mj0iODAiIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMS4wODggMCAwIDEgMy4zNjQgMTYpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI0ZGRiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNFRUUiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImIiIHgxPSI0NCIgeDI9IjQ0IiB5MT0iNDQiIHkyPSI0MCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9Ii41IiBzdG9wLWNvbG9yPSIjRkZGIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0VFRUVFQyIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjI0IiB4Mj0iMjQiIHkxPSI0MCIgeTI9IjIwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxzdG9wIG9mZnNldD0iLjUiIHN0b3AtY29sb3I9IiNGRkYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRUVFRUVDIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJoIiB4MT0iOSIgeDI9IjEwNi41NiIgeTE9IjI0LjMyIiB5Mj0iNTMuNjYiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjNTU1NzUzIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iLjYzIiBzdG9wLWNvbG9yPSIjMkUyRTJFIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzJFMkUyRSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjU2IiB4Mj0iNTYiIHkxPSI4MSIgeTI9IjciIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMS4wODIgMCAwIDEuMDE0IDMuNDMgNy45MDUpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI0JCQiIvPgogICAgICA8c3RvcCBvZmZzZXQ9Ii41OSIgc3RvcC1jb2xvcj0iIzlGOUY5RiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM4ODgiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgeGxpbms6aHJlZj0iI2EiIGlkPSJpIiB4MT0iMjQiIHgyPSIyNCIgeTE9IjQwIiB5Mj0iMjAiIGdyYWRpZW50VHJhbnNmb3JtPSJ0cmFuc2xhdGUoNCAxNikiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIi8+CiAgICA8bGluZWFyR3JhZGllbnQgeGxpbms6aHJlZj0iI2IiIGlkPSJqIiB4MT0iNDQiIHgyPSI0NCIgeTE9IjQ0IiB5Mj0iNDAiIGdyYWRpZW50VHJhbnNmb3JtPSJ0cmFuc2xhdGUoNCAxNikiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIi8+CiAgICA8bGluZWFyR3JhZGllbnQgeGxpbms6aHJlZj0iI2EiIGlkPSJsIiB4MT0iMjQiIHgyPSIyNCIgeTE9IjQwIiB5Mj0iMjAiIGdyYWRpZW50VHJhbnNmb3JtPSJ0cmFuc2xhdGUoNCAxNikiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIi8+CiAgICA8bGluZWFyR3JhZGllbnQgeGxpbms6aHJlZj0iI2MiIGlkPSJmIiB4MT0iOCIgeDI9IjEyMCIgeTE9IjQwLjY3IiB5Mj0iNjQiIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMS4wOCAwIC05LjE4OCkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIi8+CiAgICA8bGluZWFyR3JhZGllbnQgeGxpbms6aHJlZj0iI2QiIGlkPSJwIiB4MT0iNjQiIHgyPSI2NCIgeTE9IjE3LjM2IiB5Mj0iNjUuODciIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMS4wOCAwIC05LjE4OCkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIi8+CiAgICA8ZmlsdGVyIGlkPSJrIiB3aWR0aD0iMS4xMiIgaGVpZ2h0PSIxLjQ4IiB4PSItLjEiIHk9Ii0uMiI+CiAgICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249Ii40Ii8+CiAgICA8L2ZpbHRlcj4KICAgIDxmaWx0ZXIgaWQ9Im0iIHdpZHRoPSIxLjIyIiBoZWlnaHQ9IjEuMTciIHg9Ii0uMSIgeT0iLS4xIj4KICAgICAgPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iLjcyIi8+CiAgICA8L2ZpbHRlcj4KICAgIDxmaWx0ZXIgaWQ9ImUiPgogICAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIyLjA4Ii8+CiAgICA8L2ZpbHRlcj4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0iZCIgY3g9IjUyIiBjeT0iLTMxIiByPSIxMzYiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmZmIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8L3JhZGlhbEdyYWRpZW50PgogICAgPHJhZGlhbEdyYWRpZW50IGlkPSJjIiBjeD0iNTIiIGN5PSItMzEiIHI9IjEzNiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNjNmM2YzYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIuNTIiIHN0b3AtY29sb3I9IiNFRUUiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjYzZjNmM2Ii8+CiAgICA8L3JhZGlhbEdyYWRpZW50PgogIDwvZGVmcz4KICA8cGF0aCBkPSJNMyAwQzEuNCAwIDAgMS40IDAgM3Y5MGMwIDEuNiAxLjQgMyAzIDNoMTA2YzEuNiAwIDMtMS40IDMtM1YzYzAtMS42LTEuNC0zLTMtM0gzeiIgZmlsdGVyPSJ1cmwoI2UpIiBvcGFjaXR5PSIuNSIgdHJhbnNmb3JtPSJtYXRyaXgoMS4wMzYgMCAwIDEuMTM1IDYgNykiLz4KICA8cGF0aCBmaWxsPSJ1cmwoI2YpIiBkPSJNMTEgOGMtMS42IDAtMyAxLjUtMyAzLjN2OTdjMCAyIDEuNCAzLjQgMyAzLjRoMTA2YzEuNiAwIDMtMS41IDMtMy4zdi05N2MwLTItMS40LTMuMy0zLTMuM0gxMXoiLz4KICA8cGF0aCBmaWxsPSJ1cmwoI2cpIiBkPSJNMTIgMTVjLS41IDAtMSAuNS0xIDF2NzNjMCAuNi41IDEgMSAxaDEwNGMuNSAwIDEtLjUgMS0xVjE2YzAtLjYtLjUtMS0xLTFIMTJ6Ii8+CiAgPHBhdGggZD0iTTEyIDE2aDEwNHY4MEgxMnoiLz4KICA8cGF0aCBmaWxsPSJ1cmwoI2gpIiBkPSJNMTAzIDc2YzAgMS42LTEuNCAzLTMgM0gxMmMtMS42IDAtMy0xLjQtMy0zVjEyYzAtMS42IDEuNC0zIDMtM2g4OGMxLjYgMCAzIDEuNCAzIDN2NjR6IiB0cmFuc2Zvcm09Im1hdHJpeCgxLjA4NSAwIDAgMS4xMTQgMy4yMzQgNi45NykiLz4KICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMTMgNTNjNDItMjIuNCA4Mi4yLTI3LjYgMTAyLTI4LjdWMTdIMTN2MzZ6IiBvcGFjaXR5PSIuMDUiLz4KICA8cGF0aCBmaWxsPSJ1cmwoI2kpIiBkPSJtMzYgNDgtMTYgOHYtNC4zTDMwLjcgNDYgMjAgNDAuM1YzNmwxNiA4LjNWNDh6IiBvcGFjaXR5PSIuOSIvPgogIDxwYXRoIGZpbGw9InVybCgjaikiIGQ9Ik01NiA2MEg0MHYtNGgxNnY0eiIgb3BhY2l0eT0iLjkiLz4KICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNNjAgNjBINDR2LTRoMTZ2NHoiIGZpbHRlcj0idXJsKCNrKSIgb3BhY2l0eT0iLjIiIHRyYW5zZm9ybT0ibWF0cml4KDEuMTI1IDAgMCAxLjUgLTEwLjUgLTI5KSIvPgogIDxwYXRoIGZpbGw9InVybCgjbCkiIGQ9Im0zNiA0OC0xNiA4di00LjNMMzAuNyA0NiAyMCA0MC4zVjM2bDE2IDguM1Y0OHoiIGZpbHRlcj0idXJsKCNtKSIgb3BhY2l0eT0iLjQiLz4KICA8cGF0aCBmaWxsPSJ1cmwoI24pIiBkPSJtMTE3LjIgOTYuNy0uNi0uN0gxMmwtLjguNmMuMi4yLjUuNC44LjRoMTA0LjVjLjMgMCAuNSAwIC43LS4zeiIvPgogIDxnIGZpbGw9InVybCgjbykiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDggMTUpIj4KICAgIDxjaXJjbGUgY3g9IjEwMSIgY3k9Ijg2IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSIxMDQiIGN5PSI4OSIgcj0iMSIvPgogICAgPGNpcmNsZSBjeD0iMTAzIiBjeT0iOTIiIHI9IjEiLz4KICAgIDxjaXJjbGUgY3g9Ijk3IiBjeT0iODYiIHI9IjEiLz4KICAgIDxjaXJjbGUgY3g9IjEwMCIgY3k9Ijg5IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI5MyIgY3k9Ijg2IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI5OSIgY3k9IjkyIiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI5NiIgY3k9Ijg5IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI5NSIgY3k9IjkyIiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI4OSIgY3k9Ijg2IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI5MiIgY3k9Ijg5IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI4NSIgY3k9Ijg2IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI5MSIgY3k9IjkyIiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI4OCIgY3k9Ijg5IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI4NyIgY3k9IjkyIiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI4MSIgY3k9Ijg2IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI4NCIgY3k9Ijg5IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI3NyIgY3k9Ijg2IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI4MyIgY3k9IjkyIiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI4MCIgY3k9Ijg5IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI3OSIgY3k9IjkyIiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI3MyIgY3k9Ijg2IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI3NiIgY3k9Ijg5IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI2OSIgY3k9Ijg2IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI3NSIgY3k9IjkyIiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI3MiIgY3k9Ijg5IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI3MSIgY3k9IjkyIiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI2NSIgY3k9Ijg2IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI2OCIgY3k9Ijg5IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI2MSIgY3k9Ijg2IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI2NyIgY3k9IjkyIiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI2NCIgY3k9Ijg5IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI2MyIgY3k9IjkyIiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI1NyIgY3k9Ijg2IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI2MCIgY3k9Ijg5IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI1MyIgY3k9Ijg2IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI1OSIgY3k9IjkyIiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI1NiIgY3k9Ijg5IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI1NSIgY3k9IjkyIiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI0OSIgY3k9Ijg2IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI1MiIgY3k9Ijg5IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI0NSIgY3k9Ijg2IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI1MSIgY3k9IjkyIiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI0OCIgY3k9Ijg5IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI0NyIgY3k9IjkyIiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI0MSIgY3k9Ijg2IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI0NCIgY3k9Ijg5IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSIzNyIgY3k9Ijg2IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI0MyIgY3k9IjkyIiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI0MCIgY3k9Ijg5IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSIzOSIgY3k9IjkyIiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSIzMyIgY3k9Ijg2IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSIzNiIgY3k9Ijg5IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSIyOSIgY3k9Ijg2IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSIzNSIgY3k9IjkyIiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSIzMiIgY3k9Ijg5IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSIzMSIgY3k9IjkyIiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSIyNSIgY3k9Ijg2IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSIyOCIgY3k9Ijg5IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSIyMSIgY3k9Ijg2IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSIyNyIgY3k9IjkyIiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSIyNCIgY3k9Ijg5IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSIyMyIgY3k9IjkyIiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSIxNyIgY3k9Ijg2IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSIyMCIgY3k9Ijg5IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSIxMyIgY3k9Ijg2IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSIxOSIgY3k9IjkyIiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSIxNiIgY3k9Ijg5IiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSIxNSIgY3k9IjkyIiByPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSI5IiBjeT0iODYiIHI9IjEiLz4KICAgIDxjaXJjbGUgY3g9IjEyIiBjeT0iODkiIHI9IjEiLz4KICAgIDxjaXJjbGUgY3g9IjExIiBjeT0iOTIiIHI9IjEiLz4KICAgIDxjaXJjbGUgY3g9IjgiIGN5PSI4OSIgcj0iMSIvPgogIDwvZz4KICA8cGF0aCBmaWxsPSJ1cmwoI3ApIiBkPSJNMTEgOGMtMS42IDAtMyAxLjUtMyAzLjN2OTdjMCAxIC40IDIgMSAyLjZWMTIuM2MwLTEuOCAxLjMtMy4yIDMtMy4yaDEwNGMxLjcgMCAzIDEuNCAzIDMuMi43IDI1IDAgOTguMiAwIDk4LjJ2LjNjLjYtLjcgMS0xLjYgMS0yLjV2LTk3YzAtMS44LTEuNC0zLjItMy0zLjJIMTF6IiBvcGFjaXR5PSIuOSIvPgo8L3N2Zz4=",
+                "oc.keyword": "konsole, slurm,bash,shell",
+                "oc.launch": "konsole.konsole",
+                "oc.name": "konsole",
+                "oc.path": "/usr/bin/konsole",
+                "oc.rules": "{\"homedir\":{\"default\":true}}",
+                "oc.showinview": "dock",
+                "oc.template": "abcdesktopio/oc.template.rockylinux.nvidia.8",
+                "oc.type": "app"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 3534809033,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/j9gawg3d3nw20yimhdd77qhxq/diff:/var/lib/docker/overlay2/uuxt72zxe91c9mb6d1bot47qf/diff:/var/lib/docker/overlay2/v9mfb7pcb7zmgmnkeoeul0ebq/diff:/var/lib/docker/overlay2/9fbn6stobn7up7qevsu9l132q/diff:/var/lib/docker/overlay2/uqd3coe8tguavnmxeylwwu7tv/diff:/var/lib/docker/overlay2/xmqjlsoaxpa7v354pg8o0se8o/diff:/var/lib/docker/overlay2/5rrllffh6gecnzo3b1xtfspgr/diff:/var/lib/docker/overlay2/mu0m4a3ckomhtvzgv3ubvvr9o/diff:/var/lib/docker/overlay2/uw131juq6z7skx72gu9q3tlzg/diff:/var/lib/docker/overlay2/60puoqxndavt9zemfeu6o6ixz/diff:/var/lib/docker/overlay2/oo71skj4repujcfqubzo35x8t/diff:/var/lib/docker/overlay2/yqwte17ni4ysxzwi0lo4e280o/diff:/var/lib/docker/overlay2/rbhbemsbz853w1otsrwng3bf3/diff:/var/lib/docker/overlay2/m8wssnxymr5jnx3ocv5q7wl21/diff:/var/lib/docker/overlay2/o6foxfwf7btoi6ro0s0n3v2e3/diff:/var/lib/docker/overlay2/ixvh33qt6ab1j7ropquc4tfg5/diff:/var/lib/docker/overlay2/gcn95ty2n4d0tnx43a2uaclrx/diff:/var/lib/docker/overlay2/zu7q5o8w71xiim5wbngrjvjit/diff:/var/lib/docker/overlay2/aea70f33c20071d28f57f6e807dcd1be22c09f19eac070bd01890e88d4eb76b0/diff:/var/lib/docker/overlay2/a2a2d59d7c5a7469e21f7382c2ddd7c174547eab8fd6bda615a2da3a71423dee/diff:/var/lib/docker/overlay2/c797029cb3a10b191926d0f4f4e3182e17b2b5ce7d69722103af8eb232a1717b/diff:/var/lib/docker/overlay2/a8fe1b3c83d01003452b14efe3d4728d778cedc48e2ee1bb36fb0f76761079f0/diff:/var/lib/docker/overlay2/bc96e5f15ea1364fae9349ba6e07cf0e03ea7f5ce504725b6cb018b10866b684/diff:/var/lib/docker/overlay2/21ca6e18b48181a548f887b0ebb37bd8700462bb382bb6560fe96eb59210f5ee/diff:/var/lib/docker/overlay2/6f94a277d462510ccb3da9b0bdae04f04f87c3b0b1dcdc06d6a588323cc167c4/diff:/var/lib/docker/overlay2/a98d0908d28d8c23e31640d196fb44f7b4d30cb84edc371c4c528f0fd80b3bd1/diff:/var/lib/docker/overlay2/ae86bbb475031aba5e4f39e7f6bb14e167fba857450a079bd241e9c4bb3f7934/diff:/var/lib/docker/overlay2/b111a0748ab6f88cb4c63b7122bfc933065f790e6fd65d1ba0dcf5d6e7e1b124/diff:/var/lib/docker/overlay2/2ebcb4be78d623653c7f853af7bd03254c163f3d1b4197b38309a573c5779ff8/diff:/var/lib/docker/overlay2/949579e140e41c2191a68d2c2c66bd5e8077bcde64d9418ae047a50acc998193/diff:/var/lib/docker/overlay2/438fd18ac7a16f46cfafc650be0089ec9fa9f105fd42c5ff3a8ec0d2d530030b/diff:/var/lib/docker/overlay2/da302b7d43e16cf667dd5bc9fdad52d25c0b4c043ed5be51d794d5f0ca26e30f/diff:/var/lib/docker/overlay2/236cac69f32ec69d40ffe579577fcac49a0e0317de166d9be50bad0a10259f81/diff:/var/lib/docker/overlay2/efc03844edbe1a259d869329a077e08ab7ad1351024442feaefc0e652f20a853/diff",
+                "MergedDir": "/var/lib/docker/overlay2/ekowm1gohyudwd83in49nin7r/merged",
+                "UpperDir": "/var/lib/docker/overlay2/ekowm1gohyudwd83in49nin7r/diff",
+                "WorkDir": "/var/lib/docker/overlay2/ekowm1gohyudwd83in49nin7r/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:e840fda5806e1d188d2fd76f50e55a309888fcb5ed9bd3eb532ccf0f2aeb2532",
+                "sha256:471274e03656a59eb4b7b68e3a972da348d1f5992d29e889744dc10d185fbce7",
+                "sha256:48a0b74c9066122c7c893bf7bdc9680dc36345cb5980659741257663e0652ca9",
+                "sha256:97ea4d69942888feb3172f792c45a226911f6d6977622ad6f19c49161793e308",
+                "sha256:60aa6b69763493640ffabdbb9adcbea78e4bfd057c90e0eabd801e63bb5a9e5c",
+                "sha256:04d6e2e7cd5cd9256dfe7bf878f139b0f670f08ef06326dcf6546667ee613f3b",
+                "sha256:d3931d51779e832cf2702e4decb0d74def3619e030f29d62835aa75cb1829ee7",
+                "sha256:18538ab504c3a472c7292455ba3d54f86d1bc335ee8f6719af2b7e53d27b6822",
+                "sha256:eac99a83de949b91ff91baad310d89a75084dad140b35ecc76cb746e48b5083e",
+                "sha256:67494fe07a9969b93fc581385dbb2ed11d3eb830f9205f32ad41e3a61dc779c0",
+                "sha256:f637c998a861f0bfa500339cf2c3a1e7218a52a01522bada829468590269f2f5",
+                "sha256:f551480a39e3d11579c62887fdd319a5b824a8979703793937b99173aead8103",
+                "sha256:cc4397be11aade1dcbf2bb6dba9371bf8fabdc36a313e6ff3599894ce74d9e27",
+                "sha256:ba56a203164d4b17a3b14f74804984f573e4d3adf6de50dcdf28e911ff646e60",
+                "sha256:c3c428d427361d3d7d218ed7b0ba224074b5dd96e3885b0490e9ea9425b27f1c",
+                "sha256:67c1040c6bcefccca6172384d88a78f91b4761dee142a994300a74d04ed1d72f",
+                "sha256:e9d422699a3a32713268d15a9b71cc823bd91eda5988d1e4fe6382433b77eda7",
+                "sha256:cd306bc84c43d18b8e5860561ec6e957976dc59389a1fa8a065e9643ac0b1ab0",
+                "sha256:ca215c5a15b4b66f9d84a339b38436da25b4eabe25b966f66c3f842fb7d1c5cf",
+                "sha256:a54d053ac206b996bf3605aab0a4d8eec2a7a9b29b8be7ea1499e37c796196e6",
+                "sha256:cacd4dd2d21cb502b566a132af8aa31444c39d49c58251b669a347d1f5b13728",
+                "sha256:b78bd2a25aeeda8af774cb16496347753986113488e7c728499edc0f88074ddc",
+                "sha256:9a23cd252fcb52af3b3256364d6c6283bccc7f6d7393def0a61d43b78ad51e74",
+                "sha256:1233efbfa2fb87b088abe815209af202a7c21e53c0c9b333c8a37b84e25b1046",
+                "sha256:24088dc6abe7db2ac483a96d8cf0bb6d96a8409dc23a30812a8f5bb2b46a04ef",
+                "sha256:c8e03976f3b4de5732c5f4cd2bab0f84073be452c3da72933f023cb635e734b1",
+                "sha256:52b92b78897b5c8bd5ad86d22e587eb29c7b537feec787be1bcf738b43b8cf43",
+                "sha256:74000185f230ad909806e2e382266ea63044efe17686e91105772b32462c533a",
+                "sha256:2a784e0227f65dcb497b6c75779e51342b0886ba84c6bfba99febb785942197b",
+                "sha256:883b88a6eadfc8b3f0585db9eca6ab66e42328ea14edddcc93b1ec1ccc5a0236",
+                "sha256:6ba36c4d02308df68e6224263f071de2e285c5f2d3eb4746e884020c40997cc3",
+                "sha256:1173b7f0a22d5e53b05d3bbf5a02fc7dd2d3b7fe28845c86fc73b259e63214b0",
+                "sha256:94cd73714a9344a9018ce66f62af0738e6aec01ecff19e8001f4af3383650842",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:34e5f7c770d770fb2f7784c62e6ac6441ed3c2bc4c7c70d72af708949e79550f"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2025-02-20T11:21:51.680461359+01:00"
+        }
+    }
+]

@@ -1,0 +1,146 @@
+[
+    {
+        "Id": "sha256:12af475814f27c59fb1f770d255c67985d53800fbebba8e95a41eedc28a7040b",
+        "RepoTags": [
+            "registry.git.embl.de/ysun/abcdesktop-apps/chimerax-pod:latest"
+        ],
+        "RepoDigests": [
+            "registry.git.embl.de/ysun/abcdesktop-apps/chimerax-pod@sha256:35d36d853858b9c6e2286d9fec26dbee409ec0515202fa7e308d0ba983d15c67"
+        ],
+        "Parent": "",
+        "Comment": "",
+        "Created": "2023-04-14T13:39:24.897731073Z",
+        "Container": "1ec54826402df00ec5220a789f983a9fcfacbbd8007cb99ac6908cae14464e27",
+        "ContainerConfig": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": null,
+            "Cmd": null,
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": null
+        },
+        "DockerVersion": "23.0.1",
+        "Author": "Alexandre DEVELY",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "balloon",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NVARCH=x86_64",
+                "NVIDIA_REQUIRE_CUDA=cuda>=12.0 brand=tesla,driver>=450,driver<451 brand=tesla,driver>=470,driver<471 brand=unknown,driver>=470,driver<471 brand=nvidia,driver>=470,driver<471 brand=nvidiartx,driver>=470,driver<471 brand=geforce,driver>=470,driver<471 brand=geforcertx,driver>=470,driver<471 brand=quadro,driver>=470,driver<471 brand=quadrortx,driver>=470,driver<471 brand=titan,driver>=470,driver<471 brand=titanrtx,driver>=470,driver<471 brand=tesla,driver>=510,driver<511 brand=unknown,driver>=510,driver<511 brand=nvidia,driver>=510,driver<511 brand=nvidiartx,driver>=510,driver<511 brand=geforce,driver>=510,driver<511 brand=geforcertx,driver>=510,driver<511 brand=quadro,driver>=510,driver<511 brand=quadrortx,driver>=510,driver<511 brand=titan,driver>=510,driver<511 brand=titanrtx,driver>=510,driver<511 brand=tesla,driver>=515,driver<516 brand=unknown,driver>=515,driver<516 brand=nvidia,driver>=515,driver<516 brand=nvidiartx,driver>=515,driver<516 brand=geforce,driver>=515,driver<516 brand=geforcertx,driver>=515,driver<516 brand=quadro,driver>=515,driver<516 brand=quadrortx,driver>=515,driver<516 brand=titan,driver>=515,driver<516 brand=titanrtx,driver>=515,driver<516",
+                "NV_CUDA_CUDART_VERSION=12.0.107-1",
+                "NV_CUDA_COMPAT_PACKAGE=cuda-compat-12-0",
+                "CUDA_VERSION=12.0.0",
+                "LD_LIBRARY_PATH=/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/lib/x86_64-linux-gnu",
+                "NVIDIA_VISIBLE_DEVICES=all",
+                "NVIDIA_DRIVER_CAPABILITIES=all",
+                "DEBCONF_FRONTEND=noninteractive",
+                "TERM=linux",
+                "LANG=en_US.UTF-8",
+                "BUSER=balloon",
+                "VGL_DISPLAY=egl",
+                "LANGUAGE=en_US:en",
+                "LC_ALL=en_US.UTF-8",
+                "ARGS=--hold -e vglrun -c proxy /usr/bin/chimerax",
+                "APPNAME=ChimeraX",
+                "APPBIN=/usr/bin/konsole",
+                "APP=/usr/bin/konsole"
+            ],
+            "Cmd": [
+                "/composer/appli-docker-entrypoint.sh"
+            ],
+            "Image": "sha256:5848b5b873d973044fc543e08f9579e2c7810a75a34af07aa6891a34abadeebc",
+            "Volumes": null,
+            "WorkingDir": "/tmp",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "maintainer": "NVIDIA CORPORATION <cudatools@nvidia.com>",
+                "oc.acl": "{\"permit\":[\"all\"]}",
+                "oc.args": "--hold -e vglrun -c proxy /usr/bin/chimerax",
+                "oc.cat": "development",
+                "oc.containerengine": "pod_application",
+                "oc.desktopfile": "org.kde.konsole.desktop",
+                "oc.displayname": "ChimeraX",
+                "oc.executeclassname": "imaging",
+                "oc.icon": "chimerax.svg",
+                "oc.icondata": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICBpZD0ic3ZnMiIKICAgdmVyc2lvbj0iMS4xIgogICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjkxIHIxMzcyNSIKICAgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIKICAgd2lkdGg9IjY0MCIKICAgaGVpZ2h0PSI2NDAiCiAgIHZpZXdCb3g9IjAgMCA2NDAgNjQwIgogICBzb2RpcG9kaTpkb2NuYW1lPSJDaGltZXJhWC1pY29uLnN2ZyI+PG1ldGFkYXRhCiAgICAgaWQ9Im1ldGFkYXRhOCI+PHJkZjpSREY+PGNjOldvcmsKICAgICAgICAgcmRmOmFib3V0PSIiPjxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PjxkYzp0eXBlCiAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIgLz48ZGM6dGl0bGU+PC9kYzp0aXRsZT48L2NjOldvcms+PC9yZGY6UkRGPjwvbWV0YWRhdGE+PGRlZnMKICAgICBpZD0iZGVmczYiPjxjbGlwUGF0aAogICAgICAgY2xpcFBhdGhVbml0cz0idXNlclNwYWNlT25Vc2UiCiAgICAgICBpZD0iY2xpcFBhdGgxNiI+PHBhdGgKICAgICAgICAgZD0iTSAwLDUxMiA1MTIsNTEyIDUxMiwwIDAsMCAwLDUxMiBaIgogICAgICAgICBpZD0icGF0aDE4IgogICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIiAvPjwvY2xpcFBhdGg+PGZpbHRlcgogICAgICAgc3R5bGU9ImNvbG9yLWludGVycG9sYXRpb24tZmlsdGVyczpzUkdCOyIKICAgICAgIGlua3NjYXBlOmxhYmVsPSJEcm9wIFNoYWRvdyIKICAgICAgIGlkPSJmaWx0ZXI0MTg2Ij48ZmVGbG9vZAogICAgICAgICBmbG9vZC1vcGFjaXR5PSIwLjQ5ODAzOSIKICAgICAgICAgZmxvb2QtY29sb3I9InJnYigwLDAsMCkiCiAgICAgICAgIHJlc3VsdD0iZmxvb2QiCiAgICAgICAgIGlkPSJmZUZsb29kNDE4OCIgLz48ZmVDb21wb3NpdGUKICAgICAgICAgaW49ImZsb29kIgogICAgICAgICBpbjI9IlNvdXJjZUdyYXBoaWMiCiAgICAgICAgIG9wZXJhdG9yPSJpbiIKICAgICAgICAgcmVzdWx0PSJjb21wb3NpdGUxIgogICAgICAgICBpZD0iZmVDb21wb3NpdGU0MTkwIiAvPjxmZUdhdXNzaWFuQmx1cgogICAgICAgICBpbj0iY29tcG9zaXRlMSIKICAgICAgICAgc3RkRGV2aWF0aW9uPSI0LjciCiAgICAgICAgIHJlc3VsdD0iYmx1ciIKICAgICAgICAgaWQ9ImZlR2F1c3NpYW5CbHVyNDE5MiIgLz48ZmVPZmZzZXQKICAgICAgICAgZHg9IjgiCiAgICAgICAgIGR5PSItOCIKICAgICAgICAgcmVzdWx0PSJvZmZzZXQiCiAgICAgICAgIGlkPSJmZU9mZnNldDQxOTQiIC8+PGZlQ29tcG9zaXRlCiAgICAgICAgIGluPSJTb3VyY2VHcmFwaGljIgogICAgICAgICBpbjI9Im9mZnNldCIKICAgICAgICAgb3BlcmF0b3I9Im92ZXIiCiAgICAgICAgIHJlc3VsdD0iY29tcG9zaXRlMiIKICAgICAgICAgaWQ9ImZlQ29tcG9zaXRlNDE5NiIgLz48L2ZpbHRlcj48ZmlsdGVyCiAgICAgICBzdHlsZT0iY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzOnNSR0I7IgogICAgICAgaW5rc2NhcGU6bGFiZWw9IkRyb3AgU2hhZG93IgogICAgICAgaWQ9ImZpbHRlcjQxOTgiPjxmZUZsb29kCiAgICAgICAgIGZsb29kLW9wYWNpdHk9IjAuNDk4MDM5IgogICAgICAgICBmbG9vZC1jb2xvcj0icmdiKDAsMCwwKSIKICAgICAgICAgcmVzdWx0PSJmbG9vZCIKICAgICAgICAgaWQ9ImZlRmxvb2Q0MjAwIiAvPjxmZUNvbXBvc2l0ZQogICAgICAgICBpbj0iZmxvb2QiCiAgICAgICAgIGluMj0iU291cmNlR3JhcGhpYyIKICAgICAgICAgb3BlcmF0b3I9ImluIgogICAgICAgICByZXN1bHQ9ImNvbXBvc2l0ZTEiCiAgICAgICAgIGlkPSJmZUNvbXBvc2l0ZTQyMDIiIC8+PGZlR2F1c3NpYW5CbHVyCiAgICAgICAgIGluPSJjb21wb3NpdGUxIgogICAgICAgICBzdGREZXZpYXRpb249IjQuNyIKICAgICAgICAgcmVzdWx0PSJibHVyIgogICAgICAgICBpZD0iZmVHYXVzc2lhbkJsdXI0MjA0IiAvPjxmZU9mZnNldAogICAgICAgICBkeD0iOCIKICAgICAgICAgZHk9IjgiCiAgICAgICAgIHJlc3VsdD0ib2Zmc2V0IgogICAgICAgICBpZD0iZmVPZmZzZXQ0MjA2IiAvPjxmZUNvbXBvc2l0ZQogICAgICAgICBpbj0iU291cmNlR3JhcGhpYyIKICAgICAgICAgaW4yPSJvZmZzZXQiCiAgICAgICAgIG9wZXJhdG9yPSJvdmVyIgogICAgICAgICByZXN1bHQ9ImNvbXBvc2l0ZTIiCiAgICAgICAgIGlkPSJmZUNvbXBvc2l0ZTQyMDgiIC8+PC9maWx0ZXI+PC9kZWZzPjxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiM2NjY2NjYiCiAgICAgYm9yZGVyb3BhY2l0eT0iMSIKICAgICBvYmplY3R0b2xlcmFuY2U9IjEwIgogICAgIGdyaWR0b2xlcmFuY2U9IjEwIgogICAgIGd1aWRldG9sZXJhbmNlPSIxMCIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMCIKICAgICBpbmtzY2FwZTpwYWdlc2hhZG93PSIyIgogICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMTU0MiIKICAgICBpbmtzY2FwZTp3aW5kb3ctaGVpZ2h0PSIxMDQ0IgogICAgIGlkPSJuYW1lZHZpZXc0IgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBpbmtzY2FwZTp6b29tPSIwLjUyMTQ5MTI1IgogICAgIGlua3NjYXBlOmN4PSI0MjguOTA4MjciCiAgICAgaW5rc2NhcGU6Y3k9IjMyMCIKICAgICBpbmtzY2FwZTp3aW5kb3cteD0iNjA1IgogICAgIGlua3NjYXBlOndpbmRvdy15PSIxOTIiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMCIKICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJnMTAiIC8+PGcKICAgICBpZD0iZzEwIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaW5rc2NhcGU6bGFiZWw9IkNoaW1lcmEtaWNvbiIKICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLjI1LDAsMCwtMS4yNSwwLDY0MCkiPjxnCiAgICAgICBpZD0iZzEyIgogICAgICAgc3R5bGU9ImZpbHRlcjp1cmwoI2ZpbHRlcjQxODYpIj48ZwogICAgICAgICBpZD0iZzE0IgogICAgICAgICBjbGlwLXBhdGg9InVybCgjY2xpcFBhdGgxNikiPjxnCiAgICAgICAgICAgaWQ9ImcyMCIKICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMjQuMDcxOCw3Ny41NTg2KSI+PHBhdGgKICAgICAgICAgICAgIGQ9Im0gMCwwIGMgLTk4LjM3NywwIC0xNzguMTI4LDg0LjM4OCAtMTc4LjEyOCwxODguNDkgMCwxMDQuMSA3OS43NTEsMTg4LjQ5IDE3OC4xMjgsMTg4LjQ5IDk4LjM3NywwIDE3OC4xMjgsLTg0LjM5IDE3OC4xMjgsLTE4OC40OSBDIDE3OC4xMjgsODQuMzg4IDk4LjM3NywwIDAsMCBtIDE5LjczNyw0MTcuNDQxIGMgLTEyMC4xNzgsMCAtMjE3LjYwMiwtOTguMDg3IC0yMTcuNjAyLC0yMTkuMDgzIDAsLTEyMC45OTUgOTcuNDI0LC0yMTkuMDgzIDIxNy42MDIsLTIxOS4wODMgMTIwLjE3OSwwIDIxNy42MDMsOTguMDg4IDIxNy42MDMsMjE5LjA4MyAwLDEyMC45OTYgLTk3LjQyNCwyMTkuMDgzIC0yMTcuNjAzLDIxOS4wODMiCiAgICAgICAgICAgICBzdHlsZT0iZmlsbDojYWFkOWY1O2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lIgogICAgICAgICAgICAgaWQ9InBhdGgyMiIKICAgICAgICAgICAgIGlua3NjYXBlOmNvbm5lY3Rvci1jdXJ2YXR1cmU9IjAiIC8+PC9nPjxnCiAgICAgICAgICAgaWQ9ImcyNCIKICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzNjkuNjkxNCw1OS41MjE1KSI+PHBhdGgKICAgICAgICAgICAgIGQ9Im0gMCwwIGMgLTMwLjgxOSw2LjU0MSAtNzEuOTM3LDIzLjg5NiAtMTEzLjk2Myw0OS42MTYgLTc2LjI5MSw0Ni42ODMgLTEyNi42ODMsMTAzLjI0NiAtMTEyLjU1MiwxMjYuMzM4IDcuMDU3LDExLjUzMiAyOC44NzIsMTIuNTMyIDU4LjQ0Nyw0LjgyOSAxLjAxMSwtNS4zODUgNC4xMzcsLTEwLjM0NSA5LjE3OCwtMTMuNDMzIDcuODEsLTQuNzc3IDE3LjU0NSwtMy41MDEgMjMuOTc0LDIuMzg1IDIyLjM5OSwtOC44NjYgNDcuMDksLTIxLjE5IDcyLjExOSwtMzYuNTA2IDIxLjkwOCwtMTMuNDA4IDQxLjY3MiwtMjcuNjI1IDU4LjM5MSwtNDEuNjMzIDMuNjcsNC44OTUgNi4zNDIsOC45OTQgOS4wNjMsMTMuNzAxIC0xNy4wNTMsMTIuMjg5IC0zNS40ODEsMjQuNTYyIC01NC45OTgsMzYuNTA2IC0yNi43NjIsMTYuMzc2IC01My4xMzMsMzAuNjM1IC03OC4wOCw0Mi41MTkgMC4wNDMsNi44IC0zLjI5OCwxMy40NTQgLTkuNTE5LDE3LjI2IC03LjgwNSw0Ljc3NyAtMTcuNTI4LDMuNTA0IC0yMy45NTgsLTIuMzczIC02NC44MTgsMjYuNTk2IC0xMTQuNzA0LDMzLjU0NCAtMTI2LjY4OCwxMy45NTggLTE4LjMwNCwtMjkuOTA5IDU4LjY5LC0xMTAuMzUgMTcxLjk3MSwtMTc5LjY2OCBDIC01OS4xMjcsLTEuNjgyIC0zLjM0MiwtMjcuMjM1IDQwLjA1MywtMzkuOTY1IEwgMCwwIFoiCiAgICAgICAgICAgICBzdHlsZT0iZmlsbDojMmUyOTJhO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lIgogICAgICAgICAgICAgaWQ9InBhdGgyNiIKICAgICAgICAgICAgIGlua3NjYXBlOmNvbm5lY3Rvci1jdXJ2YXR1cmU9IjAiIC8+PC9nPjwvZz48L2c+PGcKICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLC0xLC00NC40ODc4MDMsMjkuMTQ3MTgxKSIKICAgICAgIHN0eWxlPSJmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0OjUwMDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZTozNTBweDtsaW5lLWhlaWdodDoxMjUlO2ZvbnQtZmFtaWx5OidUZVggR3lyZSBDaG9ydXMnOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J1RlWCBHeXJlIENob3J1cywgTWVkaXVtJzt0ZXh0LWFsaWduOnN0YXJ0O2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3dyaXRpbmctbW9kZTpsci10Yjt0ZXh0LWFuY2hvcjpzdGFydDtmaWxsOiNmZjAwMDA7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjFweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxO2ZpbHRlcjp1cmwoI2ZpbHRlcjQxOTgpIgogICAgICAgaWQ9InRleHQ0MTU0Ij48cGF0aAogICAgICAgICBkPSJtIDQ4Mi4xMDU4OSwtMjU4LjkzMDk5IGMgLTMuODUsMC4zNSAtNy4zNSwwLjcgLTguNCwwLjcgLTYuMywwLjcgLTExLjksMS4wNSAtMTUuNCwxLjA1IC0xMy4zLDAgLTIxLjcsLTQuOSAtMjYuMjUsLTE1LjA1IC01LjYsLTEzLjMgLTkuNDUsLTI4LjM1IC0xOC45LC03My44NSBsIC0zLjE1LC0xNS43NSAyNy4zLC0zMi45IGMgMTUuNCwtMTguOSAyNS4yLC0yNS45IDM2LjQsLTI1LjkgNC45LDAgOS4xLDEuNCAxNS40LDUuMjUgbCAxNS43NSwtMjQuODUgYyAtNywtNS42IC0xMS45LC03LjM1IC0xOS42LC03LjM1IC0xNS4wNSwwIC0yNS45LDcgLTQyLDI4IGwgLTM1LjM1LDQ0LjEgLTEyLjYsLTYzLjcgYyAtMS4wNSwtNS4yNSAtMy4xNSwtNy4zNSAtNywtNy4zNSAtNS4yNSwwIC0yMS4zNSwzLjg1IC01NC4yNSwxMi45NSBsIC04LjA1LDEwLjE1IGMgMy44NSwtMC43IDcuMzUsLTEuNCA4LjQsLTEuNzUgMTMuNjUsLTIuOCAxNC4zNSwtMi44IDE4LjU1LC0yLjggMTAuMTUsMCAxNS40LDQuOSAxOC45LDE2LjQ1IDUuOTUsMjEgMTAuODUsNDEuMyAxNC43LDYyLjY1IC0yNy4zLDM1LjM1IC00Ni41NSw1OS4xNSAtNTMuNTUsNjYuMTUgLTkuNDUsOS40NSAtMTguMiwxMi42IC0zNSwxMi42IC0zLjE1LDAgLTUuMjUsMCAtMTAuODUsLTAuNyBsIC0xNy4xNSwyNi4yNSBjIDguMDUsMS4wNSAxMS45LDEuNCAxNS43NSwxLjQgMTAuMTUsMCAyMS4zNSwtMi4xIDI4LjcsLTUuNiAxMC44NSwtNS4yNSAyMC4zLC0xNC43IDQwLjI1LC00MC42IGwgMjEsLTI2Ljk1IDE0LjcsLTE4LjU1IDE0LjcsNzIuMSBjIDMuNSwxOC41NSA1LjYsMjIuNzUgMTEuMiwyMi43NSAyLjgsMCA3LC0wLjcgMTEuOSwtMi4xIGwgMTkuOTUsLTMuNSAyOCwtNS4yNSA1Ljk1LC04LjA1IHoiCiAgICAgICAgIHN0eWxlPSIiCiAgICAgICAgIGlkPSJwYXRoNDIzMCIgLz48L2c+PC9nPjwvc3ZnPg==",
+                "oc.keyword": "chimerax,imaging",
+                "oc.launch": "konsole.ChimeraX",
+                "oc.name": "chimeraX",
+                "oc.path": "/usr/bin/konsole",
+                "oc.rules": "{\"homedir\":{\"default\":true}}",
+                "oc.showinview": "dock",
+                "oc.template": "abcdesktopio/oc.template.ubuntu.nvidia.22.04",
+                "oc.type": "app",
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "22.04"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 3274397001,
+        "VirtualSize": 3274397001,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/3e27b2066d017863705077521fa9cc8f0b31bbef49cb5bc89f8a708a5a432825/diff:/var/lib/docker/overlay2/6f178c8d2cec4e8c5394ad9fe0bbb245f61f04b091050ab722330f73765b20e1/diff:/var/lib/docker/overlay2/f0aa8527a6cf6d604bb1895f59d057b48674d13274f492b88d0646e31e1a8c0a/diff:/var/lib/docker/overlay2/4350067b6f7e4452d75763abc6be12ce71373431f026063d98c322f53f972dcd/diff:/var/lib/docker/overlay2/13e88ca3a11afdd3cd0026d853d5fc081eecb4927db4dd790f7f8ae30ba5ed8e/diff:/var/lib/docker/overlay2/8b9d2dc95ad00e31fe7a7b4d5c3383f20a9620adcf5a61163e795b20881bd2e7/diff:/var/lib/docker/overlay2/42883cf3fa93c1244815e2f133b18fd3f4cd6bed3baef0bf0f4bdd8f996d5591/diff:/var/lib/docker/overlay2/f04e9e1655bdcf9218cb94279e96123f02c1719cbf0f228bc3ba9aa877b9325b/diff:/var/lib/docker/overlay2/1391e79b45aa59d7ef710c7e1dbd222c585f618431496ed83215b67ccc066fa0/diff:/var/lib/docker/overlay2/e301707500c649d8a964773daf3016e648dff30990d8b2ac2aa43e1b3de4bb2c/diff:/var/lib/docker/overlay2/08cd52d0fc97f3080b7e8c53244de9e9d53f0698afe53ddb03afb22e0b5ded91/diff:/var/lib/docker/overlay2/bdcf32a1035a3db53346fac89dad706fdfc1cc14f0e71b1980bb36f7bd6cd374/diff:/var/lib/docker/overlay2/239af9eb88bd88eefb5fb1048ffba592915edab4204b7304b0b9e9e97db3343b/diff:/var/lib/docker/overlay2/89d997e4982f43b5cf42883afdccf3874bbd234e4c09f5075209d628c587554d/diff:/var/lib/docker/overlay2/7b3afe12bad31e19f671b6c622ae342367c9ad30a39c934e988a667f73cca876/diff:/var/lib/docker/overlay2/5bb2a8665d07d94fe6f6c76169d77411f409410165569352e06cdd0058312e3c/diff:/var/lib/docker/overlay2/f96a9fe4415593968e01efd26955b7d22d49449a162c76079456517fac7e58b0/diff:/var/lib/docker/overlay2/39f5adee10c3a93d92ad97adf5a2487151fdbecb2c42c9b656ddc0ae60a4e1d6/diff:/var/lib/docker/overlay2/cd4532699660cb107eddcf7f842910eb6c7088e5128be67a7fc924063a4e462e/diff:/var/lib/docker/overlay2/6c1fe63d412736ac00ee0ceaac81c897a8146e14b6061a7c936d94defadd2298/diff:/var/lib/docker/overlay2/e0974aa17d74b0a692d76d434d51c77733925ab5c9b387e040fb58dbe06a2485/diff:/var/lib/docker/overlay2/b20d0aad4feea3dbc21e6dffea4f49e61d10e73d52c1ff317ede4ac4c35ecd6a/diff:/var/lib/docker/overlay2/af906e351dfee52431b51bdd5d5de0b9ccb8b48be8c18a5f22434f81159b65bf/diff:/var/lib/docker/overlay2/a95f0880debd995a78ec17e55093907454d1d1632c13441f0d1a69af9dd3ede2/diff:/var/lib/docker/overlay2/eba60c660bf615c8ae8c19955f74d38dc239d5244d356edbd7fd9873bd5d4f90/diff",
+                "MergedDir": "/var/lib/docker/overlay2/f5c3596f2543f987218758a700bf42a43231bc3940fdbb6b3ec3dc4b483cf473/merged",
+                "UpperDir": "/var/lib/docker/overlay2/f5c3596f2543f987218758a700bf42a43231bc3940fdbb6b3ec3dc4b483cf473/diff",
+                "WorkDir": "/var/lib/docker/overlay2/f5c3596f2543f987218758a700bf42a43231bc3940fdbb6b3ec3dc4b483cf473/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:202fe64c3ce39b94d8beda7d7506ccdfcf7a59f02f17c915078e4c62b5c2ed11",
+                "sha256:9d41c206e547668d69e97b28db7b0578f277c41143ad972c813e5c13657eba2d",
+                "sha256:295851b9c8a6d790422ae0d08a7e4af310991b3a103d00ece6870b93fe296cbf",
+                "sha256:f2087540d2f36bf32215b3d5208f87868dab119865c31a96a6303fc1f4fc9322",
+                "sha256:00f81c503a346d7c9658b2b8a17c663e08d335f28630ae2d1664712ef1d67d9e",
+                "sha256:0d65f2078f9dacbc8c918dfd3ad720ec7256cfd95c0b9cd2f1bb3f80a301cbf8",
+                "sha256:986364b7fb266dccc3fd2aa28d5415c91b5add39ec40d9b4e2e7d6838b224436",
+                "sha256:fc2b6b60f78f2a40e735245415ee671b18c71a593e0e475f8eb8b328e0b71a86",
+                "sha256:e421fec0dc2278a03f8ef26d38bf54b294cb01321a3cb8b07b3b77eeef601003",
+                "sha256:3ea60641bdc6350f6a8040bdc9f08e9d5a68ae95366170d292b3a910a79b43ee",
+                "sha256:1f153b2cc58ac47774f5fd55297dfcbe2a772bf7cf9c9f6dbac6c22ed0adcf49",
+                "sha256:6f8adf0039bb563657e67d56efa01dbeebafe38cbe8eaf78b395e9bc0b69e333",
+                "sha256:b841d04aa8c5a52bc7c16fba3badb01d6c90f2d71850f31c8d012cb76d352334",
+                "sha256:fc248efc8167528dc1b4a189c26f10b1558390adef63fc6ff499e3b2a13825e7",
+                "sha256:fe490b38609fcf58927948c2bc8a476f5706602ca6143477f4a360193a3161bf",
+                "sha256:7331bca235c4717c3ae7b560c2f20ad45d7216b7a5bcac4d20aac63946d65224",
+                "sha256:763540441da8220ac7be0311d18ac10e29e314c49254416af48509553ce7c03d",
+                "sha256:5682f12bbc5905790e8ddd2e6ac4d929722e0cdc9416f355f3ba125ce0162a45",
+                "sha256:a82a5c8122efe434794861ca2073db54f861a6051b0d2f9ff064ffac8cbcde13",
+                "sha256:00d4c21c4c83fa2da46dfdabae57655c1183fcde40e956196182aef0fad5e760",
+                "sha256:7b61b3b46dd5072d4bb06681076a87c28f78aee0309f4ecac5063ff4056edd9d",
+                "sha256:350a7ee379b76c3d710a17b3af1a227566723e23e2b3a3e19b8f7c4bd73d8b6b",
+                "sha256:d97a86fccc1b6841b1682708b253bbc1f8d8802b19b68056d28ee6efa19b6f2c",
+                "sha256:c98a87cb2de076c24ca0bef68a6849f2bbfde30937c4c97c4d1286530ee2c1ed",
+                "sha256:8dea4849c74006cc821acef0948b3f9382c40a1f9d06778c21f575471278ce46",
+                "sha256:945987815d825c5ca8899bbe4a1d421f46b0ac74c91be30817c7d96f2cc2dbf6"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]

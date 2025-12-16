@@ -1,0 +1,127 @@
+[
+    {
+        "Id": "sha256:0ab993f236c9d6227771268c46afa2c28f87fc792a73e1f6c60ae9a2b1dbe388",
+        "RepoTags": [
+            "registry.git.embl.org/grp-cbbcs/abcdesktop-apps/itk-snap:latest"
+        ],
+        "RepoDigests": [
+            "registry.git.embl.org/grp-cbbcs/abcdesktop-apps/itk-snap@sha256:6e7c7e7c60a8ad2476daef0f32e8ab5179ab38d5543fb90be1aaa92f70ebba12"
+        ],
+        "Parent": "",
+        "Comment": "",
+        "Created": "2025-11-27T13:13:45.12919242Z",
+        "DockerVersion": "",
+        "Author": "",
+        "Config": {
+            "User": "root",
+            "Env": [
+                "PATH=/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NVARCH=x86_64",
+                "NVIDIA_REQUIRE_CUDA=cuda>=11.8 brand=tesla,driver>=470,driver<471 brand=unknown,driver>=470,driver<471 brand=nvidia,driver>=470,driver<471 brand=nvidiartx,driver>=470,driver<471 brand=geforce,driver>=470,driver<471 brand=geforcertx,driver>=470,driver<471 brand=quadro,driver>=470,driver<471 brand=quadrortx,driver>=470,driver<471 brand=titan,driver>=470,driver<471 brand=titanrtx,driver>=470,driver<471",
+                "NV_CUDA_CUDART_VERSION=11.8.89-1",
+                "NV_CUDA_COMPAT_PACKAGE=cuda-compat-11-8",
+                "CUDA_VERSION=11.8.0",
+                "LD_LIBRARY_PATH=/usr/local/nvidia/lib:/usr/local/nvidia/lib64",
+                "NVIDIA_VISIBLE_DEVICES=all",
+                "NVIDIA_DRIVER_CAPABILITIES=all",
+                "NV_CUDA_LIB_VERSION=11.8.0-1",
+                "NV_NVTX_VERSION=11.8.86-1",
+                "NV_LIBNPP_VERSION=11.8.0.86-1",
+                "NV_LIBNPP_PACKAGE=libnpp-11-8=11.8.0.86-1",
+                "NV_LIBCUSPARSE_VERSION=11.7.5.86-1",
+                "NV_LIBCUBLAS_PACKAGE_NAME=libcublas-11-8",
+                "NV_LIBCUBLAS_VERSION=11.11.3.6-1",
+                "NV_LIBCUBLAS_PACKAGE=libcublas-11-8=11.11.3.6-1",
+                "NV_LIBNCCL_PACKAGE_NAME=libnccl2",
+                "NV_LIBNCCL_PACKAGE_VERSION=2.15.5-1",
+                "NCCL_VERSION=2.15.5-1",
+                "NV_LIBNCCL_PACKAGE=libnccl2=2.15.5-1+cuda11.8",
+                "NVIDIA_PRODUCT_NAME=CUDA",
+                "DEBCONF_FRONTEND=noninteractive",
+                "TERM=linux",
+                "LANG=en_US.UTF-8",
+                "BUSER=balloon",
+                "LC_ALL=en_US.UTF-8",
+                "LANGUAGE=en_US:en",
+                "APPNAME=ITK-SNAP",
+                "APPBIN=/usr/bin/konsole",
+                "APP=/usr/bin/konsole",
+                "ARGS=--name ITK-SNAP --hold -e vglrun -c proxy /opt/itksnap-4.4.0/bin/itksnap"
+            ],
+            "Entrypoint": [
+                "/opt/nvidia/nvidia_entrypoint.sh"
+            ],
+            "Cmd": [
+                "sh",
+                "-c",
+                "mkdir -p ~/tmp && /composer/appli-docker-entrypoint.sh "
+            ],
+            "WorkingDir": "/opt",
+            "Labels": {
+                "maintainer": "NVIDIA CORPORATION <cudatools@nvidia.com>",
+                "oc.acl": "{\"permit\":[\"all\"]}",
+                "oc.args": "--name ITK-SNAP --hold -e vglrun -c proxy /opt/itksnap-4.4.0/bin/itksnap",
+                "oc.cat": "development",
+                "oc.displayname": "itk-SNAP",
+                "oc.icon": "itk.svg",
+                "oc.icondata": "PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDIwMDEwOTA0Ly9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiB3aWR0aD0iNDAwLjAwMDAwMHB0IiBoZWlnaHQ9IjQwMC4wMDAwMDBwdCIgdmlld0JveD0iMCAwIDQwMC4wMDAwMDAgNDAwLjAwMDAwMCIKIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIG1lZXQiPgoKPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsNDAwLjAwMDAwMCkgc2NhbGUoMC4xMDAwMDAsLTAuMTAwMDAwKSIKZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSJub25lIj4KPHBhdGggZD0iTTE1NjAgMzI3NyBjLTc2IC0yNCAtMTc5IC0xNTggLTE5NSAtMjU0IGwtNyAtNDMgLTQxIDI0IGMtMjMgMTMgLTU2CjI2IC03MiAyOSAtMTcgMyAtNjQgMjEgLTEwNSA0MCAtODYgNDAgLTEwMCA0NCAtMTU1IDUxIC0xNTMgMTkgLTE2MyAxOSAtMjEwCi00IC0yNSAtMTIgLTYxIC0zNiAtNzkgLTU0IC0zMCAtMjggLTM1IC00MCAtNDYgLTExOSBsLTEzIC04NyAyOCAtMzAgYzMzIC0zNQo2MyAtMzggMTQ1IC0xNCAzMCA5IDg2IDE1IDEyMyAxNCA2NSAtMSAxMzcgLTIyIDEzNyAtMzggMCAtNSAxMSAtMTQgMjQgLTIyCjI5IC0xNSAxMjAgLTEyNSAxNTggLTE4OSA1MCAtODcgNTcgLTEwNiA2NSAtMTk2IGw4IC05MCAzOCAtNiBjMjEgLTMgNjEgLTIKOTAgMyA0MiA4IDU3IDcgNzkgLTcgMjcgLTE1IDMwIC0xNSA2OSA3IGw0MSAyMyAzOSAtMjMgYzQxIC0yNCA4NyAtMjMgMTE3IDEKMTcgMTQgMjQgNiA2NiAtODAgNTEgLTEwMiA2NSAtMjA1IDQyIC0zMDUgLTIzIC05NyAtNDEgLTE0MyAtODAgLTIwMyAtMTggLTI3Ci00OCAtNzYgLTY3IC0xMDggLTM4IC02NiAtMTcxIC0xOTMgLTIzNCAtMjI0IC0yMiAtMTEgLTY4IC0yNiAtMTAyIC0zMyAtNDMKLTkgLTY5IC0yMSAtODggLTM5IC0yNCAtMjYgLTI0IC0yOCAtOCAtNDMgMjIgLTE5IDgyIC0zNiAxODggLTUzIDQ0IC03IDk3Ci0yMSAxMTcgLTI5IDIxIC05IDQ2IC0xNiA1NyAtMTYgMTAgMCA2MSAtMjAgMTEzIC00NSA1MSAtMjUgMTEwIC00OCAxMzIgLTUwCjIxIC0zIDUxIC0xNCA2NyAtMjYgMTYgLTExIDczIC00MSAxMjcgLTY2IDUzIC0yNSAxMTYgLTU5IDEzOSAtNzUgMzUgLTI1IDQ4Ci0yOSA3NyAtMjQgMjggNSA0MSAxNiA2MSA1MCAzMSA1MyAzMSA3MCAzIDg4IC0yNyAxNyAtMTM2IDUzIC0xOTMgNjMgLTcyIDEyCi0xNzIgODYgLTIxNyAxNjAgLTEyIDIwIC0xOCA0OSAtMTggODkgMCA0OSA1IDY1IDI2IDk0IDE3IDIyIDMyIDYwIDQwIDEwNCA3CjM5IDMyIDEwNyA1NCAxNTIgMzIgNjUgNDQgMTAzIDU1IDE4MiAyNCAxNjUgMjAgMjExIC0yNSAzNDcgLTIzIDY1IC0zOSAxMjEKLTM3IDEyMyA3IDggMTg3IC0xNzcgMjE0IC0yMTkgMTQgLTIzIDM0IC00OCA0NCAtNTUgMTAgLTcgMjcgLTMyIDM3IC01NiAzNwotODIgMTE4IC0xOTIgMjA4IC0yODEgOTcgLTk2IDIyNCAtMjQ4IDIyNCAtMjY4IDAgLTcgMjYgLTQzIDU3IC04MiBsNTcgLTcwIDYKLTEyMiBjNSAtMTE3IDYgLTEyMyAzMyAtMTUxIDMzIC0zNCAyMDggLTExNSAyMzAgLTEwNiA5IDMgMjMgMjEgMzEgMzkgMTQgMjkKMTUgNTcgOCAyMDIgLTggMTYxIC0xMCAxNzMgLTUxIDI5MyAtNTIgMTUwIC03NiAyMTEgLTE0NiAzNTUgLTMwIDYxIC02NSAxNDQKLTc5IDE4NSAtMTQgNDEgLTM3IDk3IC01MSAxMjQgLTE0IDI3IC0yNSA1NyAtMjUgNjUgMCA5IC02IDI2IC0xNCAzNyAtOCAxMQotMjMgNDEgLTMyIDY1IC0zOCA5OSAtMTQ5IDI0MyAtMjI0IDI5MyAtMTQgOSAtNjQgNTMgLTExMSA5OSAtNDcgNDUgLTk5IDkxCi0xMTYgMTAyIC02NSA0MiAtMTE3IDgyIC0xODUgMTQzIC0zOCAzNCAtNzQgNjIgLTc5IDYyIC0xNSAwIC0xMDggNzggLTE1OAoxMzIgLTQ4IDUyIC0xNjYgMTM3IC0yMjYgMTYyIC00MiAxOCAtMTMzIDE5IC0xODUgM3oiLz4KPC9nPgo8L3N2Zz4K",
+                "oc.keyword": "ITK-SNAP",
+                "oc.launch": "ITK-SNAP.konsole",
+                "oc.name": "ITK-SNAP",
+                "oc.path": "/usr/bin/konsole",
+                "oc.rules": "{\"homedir\":{\"default\":true}}",
+                "oc.showinview": "dock",
+                "oc.template": "abcdesktopio/oc.template.ubuntu.22.04",
+                "oc.type": "app",
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "22.04"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 5295342001,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/02b6a8057c3956d5320a1ea2fc12893b1f5ca7f430e3e9897c62b86260cc22cc/diff:/var/lib/docker/overlay2/530da5275baa8b7c9b32f04d912cc4b3270a5788b04f4008057c7c74822585e1/diff:/var/lib/docker/overlay2/3facd4d84bdbe34b1231580a935f94a54a80ef93d762f8fcecb72a7359ecb95c/diff:/var/lib/docker/overlay2/18e6a48eee88e28f5b07d353790cdcc878279f31be13d0866ed1af10d3fdfe3b/diff:/var/lib/docker/overlay2/28dd763280d2da9d2c73562718d707e03939f80ef7f8085142620015f11f0435/diff:/var/lib/docker/overlay2/9accc7f5ec5e51e13a8a5ddb7f26b67884407b1acbe52bbb716c1f9e710da6ed/diff:/var/lib/docker/overlay2/6fa8b527cc9131223c39ada9842a222e020209f2fd5ae015f79bb66b5832c6b2/diff:/var/lib/docker/overlay2/535851dac9ca0ad1e31e950047148fa976eff411668daabca4d9a50eae9cbd0d/diff:/var/lib/docker/overlay2/28879322f4764c9c4c1cec2b7e190353fda8138dbf6963632fe536e389b3984f/diff:/var/lib/docker/overlay2/aa5e98430f104afe63eea3d10c516b12ed724c1a668fc8af2d87a6a70a882800/diff:/var/lib/docker/overlay2/ffa1ddb101674e84c9bb43b7e9d13e7d0404fc211bafe277ea828c5c5999aeec/diff:/var/lib/docker/overlay2/7e6d6f7d3554a12738d91f216c7e38a31a6aa21f2973787c3cfdc88f221b6ff0/diff:/var/lib/docker/overlay2/b47b1eb19a13c908d9b880cb11d999c0f7c19913ec82d9e53cbde7ce961f9059/diff:/var/lib/docker/overlay2/ea3e64ed3b57083186f21947f33183aea98526a196730a3b579b96483e62e0d4/diff:/var/lib/docker/overlay2/6d90125788acdb8722bcc974f351d17145eaab418ff05131d325d3c15f29c51f/diff:/var/lib/docker/overlay2/adedfc74c0792dcaaa0a3c4dd02f22641d9bc404cbe385b0e89190eef2c22fb7/diff:/var/lib/docker/overlay2/37fe9eaba1faeb31f22a183795c7c47ae12c8ade7f2503debc3bfda78d808283/diff:/var/lib/docker/overlay2/7a090d7fafff08576136d6cb0ea692ae4629f1c2397e10d4f6da8a00a1708891/diff:/var/lib/docker/overlay2/8f13405bd2ea785d0e4d04ce3e76683fc60fa8dc385304ba3e2f73a7de44b43a/diff:/var/lib/docker/overlay2/6a5270308db2cdd7c6384c47c38708275a53ffb3f1ed320757bdbdb4fb700b5d/diff:/var/lib/docker/overlay2/02800b5efe0802165bc8ab298703a40809055ca299dc908c869cd65cd5586598/diff:/var/lib/docker/overlay2/632f99de72267cc028395378b92e45b4bcc3704fe5bd371c84150b36c1921b0d/diff:/var/lib/docker/overlay2/18d34f5aab544d84e1c2c2e2ed4b0852db200be74975c73840a3980c67eac73e/diff:/var/lib/docker/overlay2/1b8b5efb689d3520eaf7ec65238fb399676d3d9a8349a7f724d12da00acb3504/diff:/var/lib/docker/overlay2/b90fcaf4f0c56230ab062e5ace7a2406006f19ffe8fa1be7608e3a15797de2d5/diff",
+                "MergedDir": "/var/lib/docker/overlay2/e1c2f4277508f0a97baf702042db2a34e5d2aa92e21e48d1bc48eae3b9e8537d/merged",
+                "UpperDir": "/var/lib/docker/overlay2/e1c2f4277508f0a97baf702042db2a34e5d2aa92e21e48d1bc48eae3b9e8537d/diff",
+                "WorkDir": "/var/lib/docker/overlay2/e1c2f4277508f0a97baf702042db2a34e5d2aa92e21e48d1bc48eae3b9e8537d/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:256d88da41857db513b95b50ba9a9b28491b58c954e25477d5dad8abb465430b",
+                "sha256:e6c05e83c163d632918d1c4906ee088b1e0d93a5bb3acfc6a268da52e76cc945",
+                "sha256:d6b19a46b795f8b562888c6e2826a6b11f744ab98543268b4d45ee1af05ed1cf",
+                "sha256:c0e21dcee62311c36e1f025307b3186a4b4a034f0b52011704402b39623b6587",
+                "sha256:498bbcc60d01b2080fd6fc35117cb82c80ddd4eb8a654ee330dd91587b7ec90b",
+                "sha256:bc352a27a0e47d42df7bc06e702351a4f3102d20016484c9613644dba63239e0",
+                "sha256:399d155a03b034314cd9ea52e4e1feca44be4cf92ae172ba9c6ce14f5897f0a2",
+                "sha256:dcb0f55f81ad931bb976c65730e4bafe7a03936d1fd1bd0fec6a9bcfde23561d",
+                "sha256:345cfa465206a6d1cc0812481df7edbc4553b64a26c63ccda0e5b11b0f2bf81b",
+                "sha256:7741d76f19447c0af7320d4989077f1b3b5c95f8c0b458b1f7a7db6898229410",
+                "sha256:47a6aff6e437349a01a1de7ae93e2c9a210bc91938eaff869a4c82f3fcef460c",
+                "sha256:f16f969e75d4ffb29c3c27cf5cc90daefe8f4f6306e31997d137409aa5a62ea8",
+                "sha256:3a392e181d13b2bb126b17d3f1a4408eb7ae5ebd635bbaa9a0cb6768e31465b3",
+                "sha256:5eeccd8b3f575ecb06628096c05569769af57a9fe05770569b9a8e1b8959f19c",
+                "sha256:33bffa755118da1ddef55b283054140a44d92b768715ad7d7bb6a76d2ff62ea0",
+                "sha256:f7a77f56000db67d0cee680c42695afa41cbe3ada45775fec5985c3530a4847e",
+                "sha256:7793beae107a4f6768848cbe1c6a3ed666bd8b8080ea8f2fafb6f8b7d34c7336",
+                "sha256:922eb89955e96b08e5f83d3df11e5aabe9a04abb23337121bf96ccfddbf4762a",
+                "sha256:997add93c05a2f835e668337382b2aaa4695ed9d7f7def21579db11229ca1188",
+                "sha256:3ec148831f4496dab7c91eb21c3151ce0573dcdaae8f02d3f1c6ae19cac48ef5",
+                "sha256:95ee16bf281ba6fcc78e3375a5529f3191309eb43e8bf846549909e7639b1aca",
+                "sha256:32b937f26d61aa24176c76bfcdefee4ff9bf16007d45f985906c4ffa5b0cf030",
+                "sha256:9963d55f77d16cb7c23faccfa771fa592382d0a1ca6d9a5fab9d7adb362e8833",
+                "sha256:75b54398ef254fbe13373b188f74e4ae6e3046e24df542ed758eb57472455501",
+                "sha256:39a92b35d5a4a3e564961e1033b83a394f64fca74d1d3c8c54eae28da08d0acf",
+                "sha256:d27e1bb7a5b2142828516fb821780635d9297e9360fcd39e124650b8a284163b"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]

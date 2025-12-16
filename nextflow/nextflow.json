@@ -1,0 +1,117 @@
+[
+    {
+        "Id": "sha256:37e53c8ef5b22bb683d5f85dc042a23f6c3b6dbe1c3add32ee23ed113bfcb3d0",
+        "RepoTags": [
+            "registry.git.embl.de/grp-cbbcs/abcdesktop-apps/nextflow:latest"
+        ],
+        "RepoDigests": [
+            "registry.git.embl.de/grp-cbbcs/abcdesktop-apps/nextflow@sha256:71a8cbe84a02fe3bd44e42cf64dccea067499981cd8fa7362c063e9540fb52b4"
+        ],
+        "Parent": "",
+        "Comment": "",
+        "Created": "2025-02-22T18:56:23.863808707Z",
+        "DockerVersion": "",
+        "Author": "Alexandre DEVELY",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "root",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/opt/nextflow:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NVARCH=x86_64",
+                "NVIDIA_REQUIRE_CUDA=cuda>=12.4 brand=tesla,driver>=470,driver<471 brand=unknown,driver>=470,driver<471 brand=nvidia,driver>=470,driver<471 brand=nvidiartx,driver>=470,driver<471 brand=geforce,driver>=470,driver<471 brand=geforcertx,driver>=470,driver<471 brand=quadro,driver>=470,driver<471 brand=quadrortx,driver>=470,driver<471 brand=titan,driver>=470,driver<471 brand=titanrtx,driver>=470,driver<471 brand=tesla,driver>=525,driver<526 brand=unknown,driver>=525,driver<526 brand=nvidia,driver>=525,driver<526 brand=nvidiartx,driver>=525,driver<526 brand=geforce,driver>=525,driver<526 brand=geforcertx,driver>=525,driver<526 brand=quadro,driver>=525,driver<526 brand=quadrortx,driver>=525,driver<526 brand=titan,driver>=525,driver<526 brand=titanrtx,driver>=525,driver<526 brand=tesla,driver>=535,driver<536 brand=unknown,driver>=535,driver<536 brand=nvidia,driver>=535,driver<536 brand=nvidiartx,driver>=535,driver<536 brand=geforce,driver>=535,driver<536 brand=geforcertx,driver>=535,driver<536 brand=quadro,driver>=535,driver<536 brand=quadrortx,driver>=535,driver<536 brand=titan,driver>=535,driver<536 brand=titanrtx,driver>=535,driver<536",
+                "NV_CUDA_CUDART_VERSION=12.4.127-1",
+                "NV_CUDA_COMPAT_PACKAGE=cuda-compat-12-4",
+                "CUDA_VERSION=12.4.1",
+                "LD_LIBRARY_PATH=/usr/local/nvidia/lib:/usr/local/nvidia/lib64",
+                "NVIDIA_VISIBLE_DEVICES=all",
+                "NVIDIA_DRIVER_CAPABILITIES=all",
+                "DEBCONF_FRONTEND=noninteractive",
+                "TERM=linux",
+                "LANG=en_US.UTF-8",
+                "BUSER=balloon",
+                "LANGUAGE=en_US:en",
+                "LC_ALL=en_US.UTF-8",
+                "APPNAME=Nextflow",
+                "APPBIN=/usr/bin/konsole",
+                "APP=/usr/bin/konsole"
+            ],
+            "Cmd": [
+                "/composer/appli-docker-entrypoint.sh"
+            ],
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "/opt/nextflow",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "maintainer": "NVIDIA CORPORATION <cudatools@nvidia.com>",
+                "oc.acl": "{\"permit\":[\"all\"]}",
+                "oc.cat": "development",
+                "oc.desktopfile": "org.kde.konsole.desktop",
+                "oc.displayname": "Nextflow",
+                "oc.icon": "nf.svg",
+                "oc.icondata": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZmlsbD0iIzU4ZjljOSIgZD0iTTUxMiAxMjkuOTZWMzQuMjU1QzQxNy42MyA1NC43MDcgMzQ2LjM4NyA5Ny44MyAyNTcuNTY0IDE4My4xNDJDMTI1Ljk2IDI5LjMwMyAxNS4yNjQgMjAuNTcyIDAgMjAuMTJ2OTcuMjYyYzYuMzc2Ljc4NyA4Ni44NDggMTIuOTggMTg5LjY2NCAxMzYuNzE3QzEzMi42MzIgMzA3LjE5NyA2Ny43MyAzNDcuNjM5IDAgMzcyLjY0OXYxMDEuNDU3Yzk2LjM0LTI4LjQ2NyAxODAuMDk3LTc5LjU5OSAyNDkuMzU3LTE0Mi4yMjdjNjcuNjY3IDg3LjQ2NyAxNjguNyAxNDEuMzkgMjYyLjY0MyAxNjAuMDAxVjM5MS41ODRjLTU3LjExOC0xNC41MjctMTMwLjc5Ni00OS4yODUtMTk0LjM1NC0xMzAuNTk2QzM4OS4zMDMgMTgxLjg1IDQ0My43IDE0NS45NDYgNTEyIDEyOS45NiIvPjwvc3ZnPg==",
+                "oc.keyword": "konsole,nextflow",
+                "oc.launch": "nextflow.konsole",
+                "oc.name": "nextflow",
+                "oc.path": "/usr/bin/konsole",
+                "oc.rules": "{\"homedir\":{\"default\":false}}",
+                "oc.showinview": "dock",
+                "oc.template": "abcdesktopio/oc.template.ubuntu.nvidia",
+                "oc.type": "app",
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "22.04"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 1429020052,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/365956b9274af063f5a3eb8a4a424238833a88f83bcb1d5fc37e67ecc4fba2e2/diff:/var/lib/docker/overlay2/15717527be137574358b4b0704fe792c6722d96474bab3e8cbad4fad0fce3258/diff:/var/lib/docker/overlay2/e34436ccbf99d6f7132f9e6422f94e7a90ce810ba22ea7e9b6f0b1f1c06e47af/diff:/var/lib/docker/overlay2/2378ace1688877d2dc3cf9f42456c62411c40b2f0d2579d917387eff44467986/diff:/var/lib/docker/overlay2/359fa74efed1cfa0766c6d1567bb034fb6da80bca5b593a1b58212ded87020a6/diff:/var/lib/docker/overlay2/01ccd5eb586de887ad54f4c568d1de7868a95151e51c20ec7782f84c6e6d6464/diff:/var/lib/docker/overlay2/d352baa71d66ce81ec6623fbfdb16c4cc1371a12de659a15e30a67d44477d107/diff:/var/lib/docker/overlay2/9fa65639f3359f00c8547f3a1112ee4311d41795c779557531d08ee611fa45bf/diff:/var/lib/docker/overlay2/5986c9f33e279c5a419a81e672e07f2bdbb1a25bb52cfa0bb294b3a27845c050/diff:/var/lib/docker/overlay2/0b11a05ff9d70dab5754cb70040760a96bd1f5eefa540d5c46040d8c31fc060b/diff:/var/lib/docker/overlay2/ccbb5324fc45d4ef74790aca9d4a6b28b625168b41dc33aa2c8707da2fe4fcd1/diff:/var/lib/docker/overlay2/3b238b0520da4e0c6f7135c4d74947613dab2401fff1704e61522ca756a0d056/diff:/var/lib/docker/overlay2/94a77a7b5592356c39182b9e92cbdc7d33c33883eb8bbd73611433270637bb54/diff:/var/lib/docker/overlay2/271e9494d5e10c7e8d5cf99c45ea396845ad49bd36c2d99dba19fcfa845ccfe5/diff:/var/lib/docker/overlay2/5881d9a075fcd7d1d54846976daeddcac79d8d8ea70c7ae3b9a88fbfa06c3098/diff:/var/lib/docker/overlay2/0d0d23af3005b21cc077e8714f3a2285ad0d0157697be326a27775a36959332b/diff:/var/lib/docker/overlay2/8186f46eda3ae605867c5233c9739001a6cdbf21f27842d52d81700b2a4c5637/diff:/var/lib/docker/overlay2/55043830eda9c2be3f8b3dec415739565c9197b0eb809f1c7650fcfad3a60efb/diff:/var/lib/docker/overlay2/b6d6e05c4ea0820492ecc846105d23047df0b60591f6bdb46829cadd7076b5da/diff:/var/lib/docker/overlay2/2f6497d93c2f9a88c89a492b0338630993540c1918928ae4e4fcfa7f1c7b95ac/diff:/var/lib/docker/overlay2/1834ba3d4b32717730ce34cc7d22e5516240fbb67bebb1dd0b71d2373dc462d4/diff:/var/lib/docker/overlay2/373674da636e8c27e462bfaab4a0b012b2ae33effbe6e2b4758d5e2c7a81f883/diff",
+                "MergedDir": "/var/lib/docker/overlay2/afe3d494f423f186a7ee4405fb077fc2861b704fbfd7e4ee7c2276d797f0a1f9/merged",
+                "UpperDir": "/var/lib/docker/overlay2/afe3d494f423f186a7ee4405fb077fc2861b704fbfd7e4ee7c2276d797f0a1f9/diff",
+                "WorkDir": "/var/lib/docker/overlay2/afe3d494f423f186a7ee4405fb077fc2861b704fbfd7e4ee7c2276d797f0a1f9/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:e0a9f5911802534ba097660206feabeb0247a81e409029167b30e2e1f2803b57",
+                "sha256:47654eeadbc543f1dd44ebb41c6ca0954b9f1813efabdcd46b0e7f17ac4e9fd1",
+                "sha256:efe2b79b53de08e199a2ce107d83adc0cbdff94f605e03f5ef51f3df3ae31cfd",
+                "sha256:46d54736d31f4bfeb749544e22e8611dba11128bdb2cebb820a3b452b50e7d52",
+                "sha256:809d3bb9c80fb3d31d4c061ba0b38ba4e83b6329e33c2cb2bbf27251a8e527c6",
+                "sha256:e00db18541f234e62f592d231d3a912e3c13fe4b39c1ccbbea0544fe3e0a3ab1",
+                "sha256:61cd76e4b799a7a6035fff1b2c399794b536c9a4b99b2f43c2dcdc637cca86c7",
+                "sha256:bd4ef9ec366c56d2a7899d33159d6d5994e04459c2005236ba0a6afa611fbc59",
+                "sha256:3fcf4c85178e1b6c3091f3cb92e33c004e56ad623e51326970d269977f7342b9",
+                "sha256:fe34974fb33314baedb04ceec6a09763bfcf63e4c3f4f6627b49bc451bbf9765",
+                "sha256:2c3eebef262fa7fcc0c3ff259d537a50c33cd50f0975871bc55ccc06f6b09cfb",
+                "sha256:c03010abf30745f56ad470eb5fbf0f56c62de4b419df3b8343b9fc7ff3fcaab3",
+                "sha256:a186e65ea29102f0f8da4f40c2035174941d84084a88b10fed77615292c86e63",
+                "sha256:601528d5545e93f1a98064bc7a9874fafacf28173edfd8bdb78923468a05bd07",
+                "sha256:a563186ea4a1130c02ac3c8e6efc3c1bb834d2b368a6c80b7b003a895add2b52",
+                "sha256:07936f2fcd265e54936f8cbee0c1657bc7ee2eb66f7ad409d679bf0bd7d24f73",
+                "sha256:6ca7c12503cefa5e12da6e0a6b3a50f7961ebca69e518628b4e84b1d2ebfc40d",
+                "sha256:0d14087f4528effb1bdc7d27c8656d0229b0786be0e6a4b91f899e5cc386651c",
+                "sha256:25793abc58714a4907b797e4228c21ed81d41e2c65a070e6bc51b198f92ecd9b",
+                "sha256:a65d6ef37057712eea3e50083bc87487a0383fdb7bf9c588d3375c7920b40a33",
+                "sha256:c2bda25e47df6ff26b9db14f7583fc74ba520091af37e3197718813189ff35ef",
+                "sha256:b0cf8fc982c2a064dba5e4121b283e7b6055cf274ec5952abd92dd5816c58287",
+                "sha256:c88e8794daccc2bf1afed6da6aa4d47fb7ba954503512668d5d1ca5a9e82d8f5"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]

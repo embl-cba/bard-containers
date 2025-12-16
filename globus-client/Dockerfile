@@ -1,0 +1,68 @@
+FROM abcdesktopio/oc.template.ubuntu.22.04:3.4
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y \
+    konsole \
+    git \
+    unzip \
+    x11-apps \
+    wget \
+    dbus-x11 \
+    libglib2.0-0 \
+    libgtk-3-0 \
+    libhdf5-dev \
+    libyaml-cpp-dev \
+    libfftw3-dev \
+    libglu1-mesa-dev \
+    libvtk9-qt-dev \
+    tk \
+    tcllib \
+    libpci3 \
+    libnss3 \
+    libxss1 \
+    libatk-bridge2.0-0 \
+    libgtk-3-0 \
+    libasound2 \
+    pciutils \
+    libgbm1 \
+    libxkbcommon0 \
+    libgdk-pixbuf2.0-0 \
+    libgdk-pixbuf2.0-bin \
+    && add-apt-repository -y ppa:mozillateam/ppa \
+    && apt install -y firefox-esr \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /opt
+RUN wget https://downloads.globus.org/globus-connect-personal/linux/stable/globusconnectpersonal-latest.tgz && \
+     tar xzf globusconnectpersonal-latest.tgz 
+
+COPY startapp.sh /usr/local/bin/startapp.sh
+RUN chmod +x /usr/local/bin/startapp.sh
+
+LABEL oc.icon="gcp.svg"
+LABEL oc.icondata="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI3LjIuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxMDggODAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwOCA4MCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBvbHlnb24gZmlsbD0iIzM0NWM5NyIgcG9pbnRzPSIzMS4zNiwxNS41IDI2LjM3LDI0Ljk3IDI3LjM3LDQ1Ljc2IDI1LjM4LDUxLjc0IDEyLjkxLDU1LjkgMTQuNCw2Ni41NCAyNS44Nyw3Mi42OSA0MC41MSw3Mi44NiAKCQk1Ni45Nyw3Ni44NSA4MC4zMyw3NS43NiA5NC4yMSw2OS4zNyAxMDEuMiw1OC44OSA5Ni42Myw0OC4zMyA5MC41NSwzOC4yNyA3Ny40MiwzNy4xMSA2OS40NCwzMS4yOSA1NC42NCwzMy4yOSA1Ni45NywxNC4zMyAKCQkzOS4zNCwxMy44MyAJIi8+Cgk8Zz4KCQk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTA1LjE2LDQyLjEzYzAuNjcsMCwxLjI3LDAuMjcsMS43MSwwLjcxYzAuNDQsMC40NCwwLjcxLDEuMDQsMC43MSwxLjcxYzAsMC42Ny0wLjI3LDEuMjctMC43MSwxLjcxCgkJCWMtMC40NCwwLjQ0LTEuMDQsMC43MS0xLjcxLDAuNzFjLTAuNjcsMC0xLjI3LTAuMjctMS43MS0wLjcxYy0wLjQ0LTAuNDQtMC43MS0xLjA0LTAuNzEtMS43MWMwLTAuNjcsMC4yNy0xLjI3LDAuNzEtMS43MQoJCQlDMTAzLjg4LDQyLjQsMTA0LjQ5LDQyLjEzLDEwNS4xNiw0Mi4xM0wxMDUuMTYsNDIuMTN6IE0xMDYuNDgsNDMuMjNjLTAuMzQtMC4zNC0wLjgxLTAuNTUtMS4zMi0wLjU1Yy0wLjUyLDAtMC45OCwwLjIxLTEuMzIsMC41NQoJCQljLTAuMzQsMC4zNC0wLjU1LDAuOC0wLjU1LDEuMzJjMCwwLjUyLDAuMjEsMC45OCwwLjU1LDEuMzJjMC4zNCwwLjM0LDAuODEsMC41NSwxLjMyLDAuNTVjMC41MSwwLDAuOTgtMC4yMSwxLjMyLTAuNTUKCQkJYzAuMzQtMC4zNCwwLjU1LTAuODEsMC41NS0xLjMyQzEwNy4wMiw0NC4wNCwxMDYuODEsNDMuNTcsMTA2LjQ4LDQzLjIzeiIvPgoJCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xMDQuMjQsNDUuNzF2LTIuNDJoMS4wM2MwLjI2LDAsMC40NSwwLjAyLDAuNTYsMC4wNmMwLjEyLDAuMDQsMC4yMSwwLjEyLDAuMjgsMC4yMwoJCQljMC4wNywwLjExLDAuMTEsMC4yNCwwLjExLDAuMzhjMCwwLjE4LTAuMDUsMC4zMy0wLjE2LDAuNDVjLTAuMTEsMC4xMi0wLjI3LDAuMTktMC40OCwwLjIyYzAuMTEsMC4wNiwwLjE5LDAuMTMsMC4yNiwwLjIKCQkJYzAuMDcsMC4wNywwLjE2LDAuMiwwLjI4LDAuMzlsMC4zLDAuNDdoLTAuNThsLTAuMzUtMC41M2MtMC4xMi0wLjE5LTAuMjEtMC4zMS0wLjI2LTAuMzVjLTAuMDUtMC4wNS0wLjEtMC4wOC0wLjE1LTAuMQoJCQljLTAuMDUtMC4wMi0wLjEzLTAuMDMtMC4yNS0wLjAzaC0wLjF2MS4wMUgxMDQuMjRMMTA0LjI0LDQ1LjcxeiBNMTA0LjczLDQ0LjMxaDAuMzZjMC4yMywwLDAuMzgtMC4wMSwwLjQ0LTAuMDMKCQkJYzAuMDYtMC4wMiwwLjEtMC4wNSwwLjE0LTAuMWMwLjAzLTAuMDUsMC4wNS0wLjExLDAuMDUtMC4xOGMwLTAuMDgtMC4wMi0wLjE1LTAuMDctMC4yYy0wLjA0LTAuMDUtMC4xLTAuMDgtMC4xOS0wLjEKCQkJYy0wLjA0LTAuMDEtMC4xNi0wLjAxLTAuMzYtMC4wMWgtMC4zOFY0NC4zMXoiLz4KCQk8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI0ZGRkZGRiIgZD0iTTM0LjE2LDAuNjZjMTEuMDYsMCwyMC42Miw2LjQ0LDI1LjExLDE1Ljc4CgkJCWM4LjA2LDAuMzYsMTUuODQsNC4zNCwxOC44MywxMy4wOWMxNC4zMS01Ljk1LDI0LjQyLDcuODksMjEuODksMTcuNWMxMi45NCw4LjEsNC45MSwyMi45NS0xMS44NywyOC4xNQoJCQljLTEyLjksNC0zMS41Niw2LjM3LTUwLjA4LDEuMkM0LjM2LDgyLTExLjA4LDUyLjE3LDEwLjEzLDQyLjYzdjBDNy43LDM4LjQ5LDYuMywzMy42Nyw2LjMsMjguNTJDNi4zLDEzLjEzLDE4Ljc3LDAuNjYsMzQuMTYsMC42NgoJCQlMMzQuMTYsMC42NnogTTMzLjE0LDMwLjEyYzAsMy4zLDAuNjcsNi4wMiwxLjgyLDcuOTFjMS4xNiwxLjkzLDIuODIsMy4wMSw0Ljc1LDMuMDFjMi4zNywwLDQuMDEtMS4xNCw1LjEtMi45MQoJCQljMS4zMy0yLjE2LDEuODUtNS4yNiwxLjg1LTguNDFjMC0yLjctMC4xNy01LjgxLTEuMTItOC4yNWMtMC45NS0yLjQyLTIuNjctNC4xOC01Ljc4LTQuMThjLTIuMjMsMC0zLjc1LDEuMzgtNC43NiwzLjMyCgkJCUMzMy41NSwyMy4zOSwzMy4xNCwyNy4zMSwzMy4xNCwzMC4xMkwzMy4xNCwzMC4xMnogTTYxLjYsMzMuMzhjLTEuMzIsNy41LTUuNjQsMTMuOTctMTEuNjgsMTguMTJjMC4xMi0wLjE5LDAuMjQtMC4zOCwwLjM1LTAuNTgKCQkJYzAuNDktMC44OSwwLjc5LTEuODYsMC45OC0yLjkxYzAuMTgtMS4wNCwwLjI0LTIuMTcsMC4yNC0zLjM2bC0wLjAyLTIzLjc0YzAtMS40OCwwLjM0LTIuNTYsMS4wOC0zLjI3CgkJCWMwLjc0LTAuNzEsMS44Ni0xLjA1LDMuNDItMS4wNWgwLjA3di0wLjA3bDAtMS4wMnYtMC4wN2gtMC4wN2wtNC41NiwwLjAxbDAsMGgtNC42OGgtMC4wN3YwLjA3djMuNzMKCQkJYy0wLjgyLTEuNDctMS44Ni0yLjU0LTMuMDgtMy4yNmMtMS4zOC0wLjgyLTIuOTgtMS4xOC00LjcyLTEuMThjLTAuNywwLTEuMzYsMC4wNi0xLjk4LDAuMTZjLTMuNCwwLjU4LTUuNjksMi42Ni03LjEyLDUuMzUKCQkJYy0xLjQ0LDIuNjgtMi4wMyw1Ljk3LTIuMDMsOC45OWMwLDEuMjYsMC4xLDIuNDgsMC4yOSwzLjU5YzAuNTcsMy4zNiwxLjgzLDYuMDcsMy43LDcuOTNjMS44MSwxLjgsNC4yMSwyLjc5LDcuMTQsMi43OQoJCQljMS45MywwLDMuMzgtMC4yOCw0LjYxLTAuOTljMS4xNy0wLjY4LDIuMTQtMS43NCwzLjEzLTMuMzJjLTAuMDEsMC40My0wLjAxLDAuOTktMC4wMSwxLjYzYzAsMi44LTAuMDEsNy4xMS0wLjUxLDguNjEKCQkJYy0wLjQ2LDEuMzYtMS4yOSwyLjMxLTIuMjksMi45M2MtMS4yMiwwLjc2LTIuNjksMS4wNi00LjA4LDEuMDZjLTEuMzMsMC0yLjgtMC40Ni0zLjkxLTEuNDJjLTAuOTItMC44LTEuNTgtMS45My0xLjctMy40MwoJCQlsLTAuMDEtMC4wN2gtMC4wN2gtNS40N2gtMC4wN2wwLDAuMDdjMC4xLDIuNTYsMS4zMyw0LjI2LDIuOTksNS4zN2MyLjExLDEuNDIsNC45MiwxLjg5LDYuOTcsMmMtMS40LDAuMjItMi44MywwLjMzLTQuMjksMC4zMwoJCQljLTMuNzksMC03LjQtMC43Ni0xMC42OS0yLjEzYy0xNy40LDAuMDktOC43LDIxLjAzLDE3LjA3LDE2LjUxYzE1Ljg3LDYuNjcsMzcuMDMsNi43NCw0OS4zOS0wLjMxCgkJCWM5LjUxLTUuNDIsMTMuNTMtMTUuNDcsMy45Ny0yMC40N2MxLjY2LTkuNi04Ljc1LTE2LjA4LTE3LjI2LTguMzNDNzUuMjUsMzMuNzksNjcuNzcsMzEuMDksNjEuNiwzMy4zOHoiLz4KCTwvZz4KPC9nPgo8L3N2Zz4K"
+LABEL oc.keyword="gcp"
+LABEL oc.cat="development"
+LABEL oc.launch="register.Register"
+LABEL oc.template="abcdesktopio/oc.template.ubuntu"
+LABEL oc.name="gcp"
+LABEL oc.displayname="Globus Connect Personal"
+LABEL oc.path="/usr/local/bin/startapp.sh"
+LABEL oc.type=app
+LABEL oc.rules="{\"homedir\":{\"default\":true}}"
+LABEL oc.acl="{\"permit\":[\"all\"]}"
+LABEL oc.showinview="dock"
+
+ENV APPNAME "gcp"
+ENV APPBIN "/usr/local/bin/startapp.sh"
+
+ENV APP "/usr/local/bin/startapp.sh"
+
+RUN mkdir -p /etc/localaccount && \
+    for f in passwd shadow group gshadow ; do if [ -f /etc/$f ] ; then  cp /etc/$f /etc/localaccount; rm -f /etc/$f; ln -s /etc/localaccount/$f /etc/$f; fi; done
+
+CMD [ "/composer/appli-docker-entrypoint.sh" ]
+
+    
+

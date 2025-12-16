@@ -1,0 +1,168 @@
+# To run deploy after build
+stages:
+  - build
+    #  - deploy
+
+build:fiji:
+  stage: build
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  script:
+    - mkdir -p /kaniko/.docker
+    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+    - /kaniko/executor --registry-mirror regmirror.embl.de --context fiji --dockerfile fiji/Dockerfile --destination $CI_REGISTRY_IMAGE/fiji:latest
+  rules:
+    - changes:
+      - "fiji/**/*"
+
+
+
+build:napari:
+  stage: build
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  script:
+    - mkdir -p /kaniko/.docker
+    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+    - /kaniko/executor --registry-mirror regmirror.embl.de --context napari --dockerfile napari/Dockerfile --destination $CI_REGISTRY_IMAGE/napari:latest
+  rules:
+    - changes:
+      - "napari/**/*"
+
+build:ilastik:
+  stage: build
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  script:
+    - mkdir -p /kaniko/.docker
+    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+    - /kaniko/executor --registry-mirror regmirror.embl.de --context ilastik --dockerfile ilastik/Dockerfile --destination $CI_REGISTRY_IMAGE/ilastik:latest
+  rules:
+    - changes:
+      - "ilastik/**/*"
+ 
+
+build:rstudio:
+  stage: build
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  script:
+    - mkdir -p /kaniko/.docker
+    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+    - /kaniko/executor --registry-mirror regmirror.embl.de --context rstudio --dockerfile rstudio/Dockerfile --destination $CI_REGISTRY_IMAGE/rstudio:latest
+  rules:
+    - changes:
+      - "rstudio/**/*"
+
+
+build:owncloud:
+  stage: build
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  script:
+    - mkdir -p /kaniko/.docker
+    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+    - /kaniko/executor --registry-mirror regmirror.embl.de --context owncloud --dockerfile owncloud/Dockerfile --destination $CI_REGISTRY_IMAGE/owncloud:latest
+  rules:
+    - changes:
+      - "owncloud/**/*"
+
+build:cellprofiler:
+  stage: build
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  script:
+    - mkdir -p /kaniko/.docker
+    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+    - /kaniko/executor --registry-mirror regmirror.embl.de --context cellprofiler --dockerfile cellprofiler/Dockerfile --destination $CI_REGISTRY_IMAGE/cellprofiler:latest
+  rules:
+    - changes:
+      - "cellprofiler/**/*"
+
+build:jupyterlab:
+  stage: build
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  script:
+    - mkdir -p /kaniko/.docker
+    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+    - /kaniko/executor --registry-mirror regmirror.embl.de --context jupyterlab --dockerfile jupyterlab/Dockerfile --destination $CI_REGISTRY_IMAGE/jupyterlab:latest
+  rules:
+    - changes:
+      - "jupyterlab/**/*"
+
+
+build:oc.nginx:
+  stage: build
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  script:
+    - mkdir -p /kaniko/.docker
+    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+    - /kaniko/executor --registry-mirror regmirror.embl.de --context oc.nginx --dockerfile oc.nginx/Dockerfile --destination $CI_REGISTRY_IMAGE/oc.nginx:latest
+  rules:
+    - changes:
+      - "oc.nginx/**/*"
+
+
+build:cellpose:
+  stage: build
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  script:
+    - mkdir -p /kaniko/.docker
+    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+    - /kaniko/executor --registry-mirror regmirror.embl.de --context cellpose --dockerfile cellpose/Dockerfile --destination $CI_REGISTRY_IMAGE/cellpose:latest
+  rules:
+    - changes:
+      - "cellpose/**/*"
+
+
+build:nvidia-smi:
+  stage: build
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  script:
+    - mkdir -p /kaniko/.docker
+    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+    - /kaniko/executor --registry-mirror regmirror.embl.de --context nvidia-smi --dockerfile nvidia-smi/Dockerfile --destination $CI_REGISTRY_IMAGE/nvidia-smi:latest
+  rules:
+    - changes:
+      - "nvidia-smi/**/*"
+       
+build:chimerax:
+  stage: build
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  script:
+    - mkdir -p /kaniko/.docker
+    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+    - /kaniko/executor --registry-mirror regmirror.embl.de --context chimerax --dockerfile chimerax/Dockerfile --destination $CI_REGISTRY_IMAGE/chimerax:latest
+  rules:
+    - changes:
+      - "chimerax/**/*"
+
+        #build:xedit:
+        #  stage: build
+        #  image:
+        #    name: gcr.io/kaniko-project/executor:debug
+        #    entrypoint: [""]
+        #  script:
+        #    - mkdir -p /kaniko/.docker
+        #    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+        #    - /kaniko/executor --registry-mirror regmirror.embl.de --context chimerax --dockerfile xedit/Dockerfile --destination $CI_REGISTRY_IMAGE/xedit:latest
+        #  rules:
+        #    - changes:
+        #      - "xedit/**/*"
+
