@@ -1,56 +1,42 @@
-## To add applications to bard-external.embl.de
+# BARD Containers # 
+This repository contains all the containers that are used on the BARD virtual desktop (https://bard-external.embl.de)
 
-```
-curl -X PUT -H 'Content-Type: text/javascript' https://bard-external.embl.de/API/manager/image -d @cellprofiler/cellprofiler.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard-external.embl.de/API/manager/image -d @cellprofiler_cellpose/cp_cp.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard-external.embl.de/API/manager/image -d @ chimera/chimera.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard-external.embl.de/API/manager/image -d @chimerax/chimerax.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard-external.embl.de/API/manager/image -d @chrome/chrome.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard-external.embl.de/API/manager/image -d @ fiji/fiji.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard-external.embl.de/API/manager/image -d @gedit/gedit.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard-external.embl.de/API/manager/image -d @ilastik/ilastik.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard-external.embl.de/API/manager/image -d @napari/napari.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard-external.embl.de/API/manager/image -d @nautilus/nautilus.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard-external.embl.de/API/manager/image -d @nextflow/nextflow.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard-external.embl.de/API/manager/image -d @rstudio/rstudio.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard-external.embl.de/API/manager/image -d @vscode-dl/vscode-dl.json
-```
-
-```
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @cellprofiler/cellprofiler.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @alphafold/af.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @alphalink/al.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @anylabeling/al.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @cellpose/cellpose.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @cellpose2-headless/cp-headless.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @cellprofiler/cellprofiler.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @cellprofiler_cellpose/cp_cp.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @chimera/chimera.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @chimerax/chimerax.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @chrome/chrome.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @coot/coot.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @cryoem/cryo.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @fiji/fiji.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @fiji-light/fijilight.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @firefox/firefox.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @gedit/gedit.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @ilastik/ilastik.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @image_data_explorer/ide.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @jupyterlab/jupyterlab.json
-
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @libreoffice/libre.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @matlab/matlab.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @napari/napari.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @nautilus/nautilus.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @nextflow/nextflow.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @rstudio/rstudio.json
-curl -X PUT -H 'Content-Type: text/javascript' https://bard.embl.de/API/manager/image -d @vscode/vscode.json
+All applications on BARD are standard containers with some BARD specifics, such as LABEL etc.
 
 
-```
+## Courses that used BARD as computing platform ##
 
-```
-curl -X DELETE -H "Content-type: text/JavaScript" https://bard.embl.de/API/manager/image/sha256:bd9e1b9ae02a6deab729cccd3ca5a4fae1bf215d73c156dd15c2d691eb476331
+|Course Name|No. of Participants  | Date|
+|--|--|--|
+|GloBIAS Training School, Kobe Japan| 52|25-29 Oct|
+|EMBL Predoc Course||13-16 Oct 2025|
+|EMBL Practical Adv. methods in Bioimage Analysis|26| Sept 2025|
+|Lautenschlaeger Summer School|10|Septemper 2025|
+|EMBL Internal course |13|25 September 2025|
+|STRUCTURAL BIOLOGY 2.0 : integrating X-ray diffraction and modern computational tools”, Montevideo, Uruguay | 25 | 26-28 April 2025 |
+|EMBL Advanced deep learning for image analysis   |  20 | Feb 17-24 2025|
+|EMBO Practical Integrative structural biology: solving molecular puzzles   |  20 | Nov.17-24 2024|
+|EMBL Pre-doc Course|14|Oct 21-25, 2024|
+|EMBO Practical Current methods in cell biology|24|Sept. 2024|
+|EMBO Advances in cryo-electron microscopy and 3D image processing|24|Aug. 2024|
+
+  
+# Contributing #
+To contribute to the BARD, please open PR for any questions, bug fixes, feature requests etc.
+
+# Citation #
+
+Tischer, C., Hériché, J.-K., & Sun, Y. (2025). A Virtual Bioimage Analysis Research Desktop (BARD) for Deployment of Bioimage Tools on Kubernetes. Base4NFDI User Conference 2024 (UC4B2024), Berlin. Zenodo. https://doi.org/10.5281/zenodo.14643885
+
+# Acknowledgement #
+
+This project is funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under the National Research Data Infrastructure – NFDI 46/1 – 501864659
 
 
-```
+# Testimonials #
+
+> _"what you have done on BARD is really the best platform I saw so far for BioImage analysis on a web browser, it's really cleaner than with other platforms, I am really jealous "_
+
+
+
+
